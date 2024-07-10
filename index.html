@@ -7,54 +7,108 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 
-<body>
-    <main class="contenedor">
-        <!-- Sección DNI y botones de asistencia-refrigerio -->
-        <section class="seccion-dni">
-            <h2 class="titulo-seccion">Ingresar DNI</h2>
-            <div class="contenedor-input">
-                <label for="nroDni">N° DNI</label>
-                <input type="tel" id="nroDni">
-            </div>
-            
-            <div class="grupo-botones">
-                <button class="boton-asistencia" id="btnAsistencia">Asistencia</button>
-                <button class="boton-refrigerio" id="btnRefrigerio">Refrigerio</button>
-            </div>
-        </section>
+<style>
+  h1{
+    font-size: 1.2em;
+  }
+  .btn-primary{
+    background-color: #2980b9;
+    box-shadow: 0 4px #1c6ea4;
+    transition: transform 0.3s ease-in-out;
+    border: none;
+  }
+  .btn-primary:hover{
+      background-color: #2674a9;   
+  }
+  .btn-primary:active{
+      transform: scale(0.9);   
+  }
+  .btn-danger{
+      background-color: #ff8519;
+      box-shadow: 0 4px #e46f22;
+      transition: transform 0.3s ease-in-out;
+      border: none;
+  }
+  .btn-danger:hover{
+      background-color: #ee7c19;
+  }
+  .btn-danger:active{
+      transform: scale(0.9);   
+  }
+  .contenedor-foto{
+    display: none;
+  }
+  .bg-primary{
+    background-color: #505cfd !important;
+  }
+  .titulo-card{
+    background-color: grey;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 17px;
+    padding: 10px;
+  }
+  .form-group{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+</style>
 
-        <!-- Sección información del usuario -->
-        <section class="seccion-informacion">
-            <h2 class="titulo-seccion">Información del usuario</h2>
-            <div class="contenedor-foto">
-                <img src="img/foto.png" alt="Foto del usuario">
-            </div>
-            <div class="contenedor-datos">
-                <article class="dato">
-                    <label for="codigo">Código</label>
-                    <input type="text" id="codigo" value="" disabled>
-                </article>
-                <article class="dato">
-                    <label for="nombre">Nombres</label>
-                    <input type="text" id="nombre" value="" disabled>
-                </article>
-                <article class="dato">
-                    <label for="apellido">Apellidos</label>
-                    <input type="text" id="apellido" value="" disabled>
-                </article>
-                <article class="dato">
-                    <label for="dni">DNI</label>
-                    <input type="text" id="dni" value="" disabled>
-                </article>
-                <article class="dato">
-                    <label for="cargo">Cargo</label>
-                    <input type="text" id="cargo" value="" disabled>
-                </article>
-            </div>
-        </section>
+<body>
+
+    <div class="p-3 mb-2 bg-primary text-white header text-uppercase text-center">
+      <h1>Sistema de Control de Asistencias</h1>
+    </div>
+
+    <div id='mostrar'></div>
+    <div class="container-fluid">
+      <main class="contenedor">
+      
+        <div class="form-group">
+          <label for="nroDni">Nro. DNI</label>
+          <input type="tel" class="form-control" id="nroDni" placeholder="ingresar Nro. DNI">
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary text-uppercase" id="btnAsistencia">Asistencia</button>
+          <button type="button" class="btn btn-danger text-uppercase" id="btnRefrigerio">Refrigerio</button>
+        </div>
+
+        <div class="card">
+          <h2 class="titulo-card">Información del usuario</h2>
+          <div class="contenedor-foto">
+            <img src="img/foto.png" alt="Foto del usuario">
+          </div>
+          <div class="form-group">
+            <label for=codigo">Código</label>
+            <input type="text" class="form-control" id="codigo" disabled>
+          </div>
+          <div class="form-group">
+            <label for=nombre">Nombres</label>
+            <input type="text" class="form-control" id="nombre" disabled>
+          </div>
+          <div class="form-group">
+            <label for=apellido">Apellido</label>
+            <input type="text" class="form-control" id="apellido" disabled>
+          </div>
+          <div class="form-group">
+            <label for=dni">DNI</label>
+            <input type="text" class="form-control" id="dni" disabled>
+          </div>
+          <div class="form-group">
+            <label for=cargo">Código</label>
+            <input type="text" class="form-control" id="cargo" disabled>
+          </div>
+        </div>
+
+
+
+
+
         
         <!-- Sección registro de actividades -->
         <section class="seccion-registro">
@@ -63,7 +117,7 @@
                 <label class="etiqueta-fecha">Fecha:</label> 
                 <input class="entrada-fecha" id="entrada-fecha" disabled value=""/>
                 <label class="etiqueta-horario">Horario:</label>
-                <input class="entrada-horario" disabled value="18:00:00"/>
+                <input class="entrada-horario" disabled value="08:00 A 18:00"/>
             </div>
             <div class="grupo-botones-registro">
                 <button class="boton-registro boton-ingreso-labores inactivo" id="btnIngresoLabores">Ingreso labores</button>
@@ -72,6 +126,13 @@
                 <button class="boton-registro boton-salida-labores inactivo" id="btnSalidaLabores">Salida labores</button>
             </div>
         </section>
+        
+        <!-- Hora y Fecha Actual -->
+        <section class="seccion-hora-fecha">
+          <time id="horaActual"></time>
+          <time id="fechaActual"></time>
+        </section>
+        
         <section class="seccion-gps">
             <h2 class="titulo-seccion">Geolocalización de ingreso</h2>
             <div class="contenedor-gps">
@@ -88,18 +149,22 @@
                     <span class="dato-gps" id="direccion"></span>
                 </div>
             </div>
+            <div id='mapa-container'>
+             <div id="mapa"></div>
+            </div>
         </section>
-        <section class="seccion-mapa">
-            <h2 class="titulo-seccion">Mapa</h2>
-            <div id="mapa"></div>
-        </section>
-
-        <!-- Hora y Fecha Actual -->
-        <section class="seccion-hora-fecha">
-            <time id="horaActual"></time>
-            <time id="fechaActual"></time>
-        </section>
-    </main>
+      </main>
+    </div>
+    
+    <footer>
+      <p>
+          Desarrollado por
+          <small rel="noopener noreferrer">
+          GPEM S.A.C
+          </small>
+          &copy; 2024
+      </p>
+    </footer>
  
     <!-- Botones ingresar y salir -->
     <div id="modal" class="modal">
@@ -116,6 +181,10 @@
         </div>
     </div>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    
     <script>
         // OBJETOS QUE SIMULAN CONSUMO DE BASE DE DATOS
         const personal = [
@@ -261,7 +330,23 @@
                 estado : 2,
                 actualizacion: 1
             }
-        ]
+        ];
+
+
+        const navegacionFija = () => {
+            const headerFijo = document.querySelector('#header');
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                headerFijo.classList.remove('fijo');
+                } else {
+                headerFijo.classList.add('fijo');
+                }
+            });
+            observer.observe(document.querySelector('#mostrar'));
+        };
+        navegacionFija();
+
+
 
         // FUNCIÓN QUE NO PERMITE INGRESO DE CARACTERES NO NÚMERICOS EN EL CAMPO DNI     
         const restricText = (idInput) =>{
