@@ -369,6 +369,9 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1 {
   font-size: 2.5rem;
 }
+h1{
+  color: #505cfd !important;
+}
 
 h2, .h2 {
   font-size: 2rem;
@@ -9900,8 +9903,8 @@ a:focus {
 }
 
 .bg-gradient-primary {
-  background-color: #4e73df;
-  background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+  background-color: #0061f2 !important;
+  background-image: linear-gradient(135deg, #0061f2 0%, rgba(105, 0, 199, .8) 100%) !important;
   background-size: cover;
 }
 
@@ -10297,6 +10300,8 @@ a:focus {
 
 .topbar.navbar-dark .navbar-nav .nav-item .nav-link {
   color: rgba(255, 255, 255, 0.8);
+  color:white;
+  
 }
 
 .topbar.navbar-dark .navbar-nav .nav-item .nav-link:hover {
@@ -10536,7 +10541,7 @@ a:focus {
     width: 100%;
     text-align: left;
     padding: 1rem;
-    width: 14rem;
+    /* width: 14rem; */
   }
   .sidebar .nav-item .nav-link i {
     font-size: 0.85rem;

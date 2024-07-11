@@ -20,6 +20,18 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/control-asistencia.css">
+    <style>
+        body{
+            font-family: 'Roboto',sans-serif;
+            font-size: 17px;
+        }
+        .fa, .fas{
+            color: #FFFFFF;
+        }
+        h1{
+            color: #505cfd;
+        }
+    </style>
 </head>
 
 <body id="page-top">
@@ -132,7 +144,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" style="background-color: #0061f2 !important;background-image: linear-gradient(92deg, #0061f2 0%, rgba(105, 0, 199, .8) 100%) !important;">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -303,7 +315,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Usuario GPEM</span>
+                                <span class="mr-2 d-none d-lg-inline text-white small">Usuario GPEM</span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
@@ -336,139 +348,106 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                  <div class="p-3 mb-2 header text-uppercase text-center">
-                    <h1>Sistema de Control de Asistencias</h1>
-                  </div>
-              
-                  <div id='mostrar'></div>
-
-                  <main class="contenedor grid-lg">
-
-                    <div class="card mb-3 grid-2 dni-grid">
-                      <h2 class="titulo-card">Documento de identidad</h2>
-                      <div class="form-group">
-                        <label for="nroDni">Nro. DNI</label>
-                        <input type="tel" class="form-control pt-4 pb-4" id="nroDni">
-                      </div>
-                      <div class="form-group text-center">
-                        <button type="button" class="btn btn-primary text-uppercase p-3 m-3" id="btnAsistencia">Asistencia</button>
-                        <button type="button" class="btn btn-danger text-uppercase p-3" id="btnRefrigerio">Refrigerio</button>
-                      </div>
-                    </div>
-                    
-                    <div class="card mb-3 grid-2 informacion-grid">
-                      <h2 class="titulo-card">Información del usuario</h2>               
-                      <div class="contenedor-foto grid-foto">
-                        <img src="img/foto.png" alt="Foto del usuario">
-                      </div>
-                      <div class="form-group grid-codigo flex-dato">
-                        <label class="label-dato" for="codigo">Código</label>
-                        <input type="text" class="form-control pt-4 pb-4" id="codigo" disabled>
-                      </div>
-                      <div class="form-group grid-nombre flex-dato">
-                        <label class="label-dato" for="nombre">Nombres</label>
-                        <input type="text" class="form-control pt-4 pb-4" id="nombre" disabled>
-                      </div>
-                      <div class="form-group grid-apellido flex-dato">
-                        <label class="label-dato" for="apellido">Apellido</label>
-                        <input type="text" class="form-control pt-4 pb-4" id="apellido" disabled>
-                      </div>
-                      <div class="form-group grid-dni flex-dato">
-                        <label class="label-dato" for="dni">DNI</label>
-                        <input type="text" class="form-control pt-4 pb-4" id="dni" disabled>
-                      </div>
-                      <div class="form-group grid-cargo flex-dato">
-                        <label class="label-dato" for="cargo">Cargo</label>
-                        <input type="text" class="form-control pt-4 pb-4" id="cargo" disabled>
-                      </div>
-                    </div>
-                    
-                    <!-- Sección registro de actividades -->
-                    <div class="card mb-3">
-                        <h2 class="titulo-card">Registro de actividades</h2>
-                        
-                        <div class="row">
-                          <div class="form-group col-md-6 pl-4 pr-4">
-                            <label for="entrada-fecha">Fecha :</label>
-                            <input type="text" class="form-control pt-4 pb-4" id="entrada-fecha" value="2024-07-09" disabled>
-                          </div>
-  
-                          <div class="form-group col-md-6 pl-4 pr-4">
-                            <label for="entrada-horario">Horario :</label>
-                            <input type="text" class="form-control pt-4 pb-4" id="horario" value="08:00 A 18:00" disabled>
-                          </div>
-                        </div>
-                        
-                        <div class="row p-2">
-                          <div class="col-6 col-md-3 col-lg-3 mb-4">
-                              <div class="card bg-primary text-white shadow">
-                                  <div class="card-body" id="btnIngresoLabores">
-                                      Ingreso labores
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-6 col-md-3 col-lg-3 mb-4">
-                              <div class="card bg-success text-white shadow">
-                                  <div class="card-body inactivo" id="btnIngresoRefrigerio">
-                                      Ingreso refrigerio
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-6 col-md-3 col-lg-3 mb-4">
-                              <div class="card bg-info text-white shadow">
-                                  <div class="card-body inactivo" id="btnSalidaRefrigerio">
-                                      Salida refrigerio
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-6 col-md-3 col-lg-3 mb-4">
-                              <div class="card bg-warning text-white shadow">
-                                  <div class="card-body inactivo" id="btnSalidaLabores">
-                                      Salida labores
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-    
-                    <!-- Hora y Fecha Actual -->
-                    <div class="card text-center p-4 mb-3 hora_fecha-grid">
-                      <div class="form-group"> 
-                        <time id="horaActual">12:51:00 Hrs.</time>
-                      </div>
-                      <div class="form-group">
-                        <time id="fechaActual">Miercoles, 10 de Junio de 2024</time>
-                      </div>
-                    </div>
-                    
-                    <div class="card mb-3 geolocalizacion-grid">
-                        <h2 class="titulo-card">Geolocalización de ingreso</h2>
-                        <div class="form-group">
-                            <label for="latitud">Latitud :</label>
-                            <input class="form-control dato-gps" id="latitud" disabled/>
-                        </div>
-                        <div class="form-group">
-                          <label for="longitud">Longitud :</label>
-                          <input class="form-control dato-gps" id="longitud" disabled/>
-                        </div>
-                         <div class="form-group">
-                            <label for="direccion">Dirección :</label>
-                            <textarea class="form-control" name="" id="direccion"></textarea>
+                    <div class="p-3 mb-2 header text-uppercase text-center">
+                        <h1>Módulo de Informes / Entregable (Diario - Mensual y Anual)</h1>
+                      </div>                
+                      <main class="contenedor">
+                        <form>
+                            <div class="pt-4">
+                                <p class="text-uppercase mb-0"><strong>Diario :</strong></p>
+                            </div>
+                            <div class="row">
                             
-                        </div>
-                        <div id='mapa-container'>
-                          <div id="mapa"></div>
-                        </div>
-                      </div>
-                  </main>
+                              <div class="form-group col-sm-3 col-md-6">
+                                <small class="d-block mt-2 mb-2 text-uppercase">Informe de Asistencia</small>
+                                <label for="opsalida">NN :</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" disabled value="NN">
+                              </div>
+                              
+                              <div class="form-group col-sm-3 col-md-6">
+                                <small class="d-block mt-2 mb-2 text-uppercase">Revisión de actividades rutinarias</small>
+                                <label for="opsalida">Turno :</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" value="06:00 A 14:00" disabled>
+                              </div>
 
+                              <div class="form-group col-sm-3 col-md-6">
+                                <label for="opsalida">Fecha :</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" value="2024-07-10" disabled>
+                              </div>
+
+                              <div class="form-group col-sm-3 col-md-6">
+                                <label for="opsalida">Nombre del conductor :</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" value="Pedro Quispe" disabled>
+                              </div>
+            
+                              <div class="form-group col-sm-3 col-md-6 col-lg-12">
+                                <label for="fotos">Fotos (2)</label>
+                                <input type="file" class="form-control-file" id="fotos" accept="image/*" multiple>
+                              </div>
+
+                              <div class="form-group col-sm-3 col-md-6 col-lg-12">
+                                <small class="d-block mt-2 mb-2 text-uppercase">Formato de rutas</small>
+                                <label for="opsalida">Número del servicio :</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1">
+                              </div>
+
+                              <div class="form-group col-sm-3 col-md-6">
+                                <label for="opsalida">Fecha :</label>
+                                <input type="date" class="form-control" id="exampleInputEmail1">
+                              </div>
+
+                              <div class="form-group col-sm-3 col-md-6">
+                                <label for="opsalida">Hora de servicio :</label>
+                                <input type="time" class="form-control" id="exampleInputEmail1">
+                              </div>
+
+                              <div class="form-group col-sm-3 col-md-6">
+                                <label for="opsalida">Ubicación :</label>
+                                <textarea class="w-100" id="textarea" style="border: 1px solid rgb(196, 194, 194);border-radius: 5px; outline: none;"></textarea>
+                              </div>
+
+                              <div class="form-group col-sm-3 col-md-6">
+                                <label for="opsalida">Turno de trabajo :</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" value="06:00 A 14:00">
+                              </div>
+
+                              <div class="form-group col-sm-3 col-md-6">
+                                <label for="opsalida">Ruta :</label>
+                                <textarea class="w-100" id="textarea" style="border: 1px solid rgb(196, 194, 194);border-radius: 5px; outline: none;"></textarea>
+                              </div>
+
+                              <div class="form-group col-sm-3 col-md-6">
+                                <label for="opsalida">Código de vehículo :</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1">
+                              </div>
+
+                              <div class="form-group col-sm-3 col-md-6">
+                                <label for="opsalida">Limpieza de los carros eléctricos :</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1">
+                              </div>
+
+                              <div class="form-group col-sm-3 col-md-6">
+                                <label for="opsalida">Nombre del conductor :</label>
+                                <input type="texto" class="form-control" id="exampleInputEmail1">
+                              </div>
+
+                              <div class="form-group col-sm-3 col-md-6">
+                                <label for="opsalida">Nombres del Coordinador y firma digital :</label>
+                                <textarea class="w-100" id="textarea" style="border: 1px solid rgb(196, 194, 194);border-radius: 5px; outline: none;"></textarea>
+                              </div>
+
+                            </div>
+                            <div  class="mt-2">
+                                <button type="submit" class="btn btn-primary pt-2 pb-2 pl-4 pr-4 text-uppercase">Guardar</button>
+                            </div>
+                          </form>
+                      </main> 
                 </div>
                 <!-- /.container-fluid -->
-
             </div>
             <!-- End of Main Content -->
             <!-- Footer -->
-            <footer class="text-center">
+            <footer class="text-center p-4">
               <p>
                   Desarrollado por
                   <small rel="noopener noreferrer">

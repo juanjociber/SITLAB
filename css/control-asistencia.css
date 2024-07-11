@@ -10,7 +10,9 @@ body{
     font-size: 17px;
 }
 h1{
-    font-size: 1.2em;
+    font-size: 1.28em;
+    margin: 0;
+    font-weight: bold;
 }
 @media(min-width:992px){
     h1{
@@ -23,25 +25,25 @@ img{
     object-fit: cover;
 }
 .btn-primary{
-    background-color: #2980b9;
-    box-shadow: 0 4px #1c6ea4;
+    background-color: #0061f2;
+    box-shadow: 0 4px #0551c4;
     transition: transform 0.3s ease-in-out;
     border: none;
 }
 .btn-primary:hover{
-    background-color: #2674a9;   
+    background-color: #0061f2c4;   
 }
 .btn-primary:active{
     transform: scale(0.9);   
 }
 .btn-danger{
-    background-color: #ff8519;
-    box-shadow: 0 4px #e46f22;
+    background-color: rgb(244, 161, 0);
+    box-shadow: 0 4px rgb(192, 128, 0);
     transition: transform 0.3s ease-in-out;
     border: none;
 }
 .btn-danger:hover{
-    background-color: #ee7c19;
+    background-color: rgba(244, 163, 0, 0.822) !important;
 }
 .btn-danger:active{
     transform: scale(0.9);   
