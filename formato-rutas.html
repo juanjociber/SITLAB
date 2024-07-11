@@ -30,6 +30,43 @@
         h1{
             color: #505cfd;
         }
+        .container-fluid{
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+        }
+        .card{
+          padding: 1rem;
+        }
+
+        @media(min-width:992px){
+          .container-fluid{
+            padding-left: 2rem;
+            padding-right: 2rem;
+          }
+          .card{
+            padding: 2rem;
+            padding-top: 0;
+          }
+          h1{
+            margin-bottom: 2rem;
+          }
+        }
+        #signature-pad {
+            border: 1px solid #00000044;
+            width: 400px;
+            height: 200px;
+            touch-action: none;
+        }
+        #buttons {
+            margin-top: 10px;
+        }
+
+        @media(max-width:767){
+          #signature-pad{
+            width: 100%;
+            height: 200px;
+          }
+        }
     </style>
 </head>
 
@@ -57,73 +94,83 @@
                 <a class="nav-link" href="index.html">
                   <i class="fas fa-fw fa-tachometer-alt"></i>
                   <span>Dashboard</span></a>
-              </li>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+            <a class="nav-link" href="control-asistencia.html">
+                <i class="fas fa-user"></i>
+                <span>Control de asistencia</span></a>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+            <a class="nav-link" href="control-activo.html">
+                <i class="fas fa-clock"></i>
+                <span>Control de activo</span></a>
+            </li>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+            <a class="nav-link" href="regitro-hallazgo.html">
+                <i class="fas fa-object-ungroup"></i>
+                <span>Registro de hallazgo</span></a>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+            <a class="nav-link" href="registro-incidencia.html">
+                <i class="fas fa-object-ungroup"></i>
+                <span>Registro de incidencias</span></a>
+            </li>
+
+            
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="formato-rutas.html">
+                    <i class="fas fa-fw fa-table"></i>
+                <span>Formato de rutas</span></a>
+            </li>
   
-              <!-- Divider -->
-              <hr class="sidebar-divider">
   
-              <!-- Nav Item - Pages Collapse Menu -->
-              <li class="nav-item">
-                <a class="nav-link" href="control-asistencia.html">
-                  <i class="fas fa-user"></i>
-                  <span>Control de asistencia</span></a>
-              </li>
-  
-              <!-- Nav Item - Utilities Collapse Menu -->
-              <li class="nav-item">
-                <a class="nav-link" href="control-activo.html">
-                  <i class="fas fa-clock"></i>
-                  <span>Control de activo</span></a>
-              </li>
-  
-              <!-- Nav Item - Pages Collapse Menu -->
-              <li class="nav-item">
-                <a class="nav-link" href="regitro-hallazgo.html">
-                  <i class="fas fa-object-ungroup"></i>
-                  <span>Registro de hallazgo</span></a>
-              </li>
-  
-              <!-- Nav Item - Charts -->
-              <li class="nav-item">
-                <a class="nav-link" href="registro-incidencia.html">
-                  <i class="fas fa-object-ungroup"></i>
-                  <span>Registro de incidencias</span></a>
-              </li>
-  
-              <!-- Nav Item - Tables -->
-              <li class="nav-item">
-                  <a class="nav-link" href="informe-entregable.html">
-                      <i class="fas fa-fw fa-table"></i>
-                      <span>Informes / Entregables</span></a>
-              </li>
-  
-              <!-- Nav Item - Programación de operación -->
-              <li class="nav-item">
-                <a class="nav-link" href="programacion-conductor.html">
-                  <i class="fas fa-fw fa-table"></i>
-                  <span>Programación de conductor</span></a>
-              </li>
-  
-              <!-- Nav Item - Registro de activos -->
-              <li class="nav-item">
-                <a class="nav-link" href="registro-activos.html">
-                  <i class="fas fa-fw fa-table"></i>
-                    <span>Registro de activos</span></a>
-              </li>
-  
-              <!-- Nav Item - Programación de manteniemiento -->
-              <li class="nav-item">
-                <a class="nav-link" href="programacion-mantenimiento.html">
-                  <i class="fas fa-fw fa-table"></i>
-                    <span>Programación mantenimiento</span></a>
-              </li>
-  
-              <!-- Nav Item - Registro de amonestaciones -->
-              <li class="nav-item">
-                <a class="nav-link" href="registro-amonestaciones.html">
-                  <i class="fas fa-fw fa-table"></i>
-                  <span>Registro de amonestaciones</span></a>
-              </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="informe-entregable.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Informes / Entregables</span></a>
+            </li>
+
+            <!-- Nav Item - Programación de operación -->
+            <li class="nav-item">
+            <a class="nav-link" href="programacion-conductor.html">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Programación de conductor</span></a>
+            </li>
+
+            <!-- Nav Item - Registro de activos -->
+            <li class="nav-item">
+            <a class="nav-link" href="registro-activos.html">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Registro de activos</span></a>
+            </li>
+
+            <!-- Nav Item - Programación de manteniemiento -->
+            <li class="nav-item">
+            <a class="nav-link" href="programacion-mantenimiento.html">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Programación mantenimiento</span></a>
+            </li>
+
+            <!-- Nav Item - Registro de amonestaciones -->
+            <li class="nav-item">
+            <a class="nav-link" href="registro-amonestaciones.html">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Registro de amonestaciones</span></a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -143,7 +190,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" style="background-color: #0061f2 !important;background-image: linear-gradient(92deg, #0061f2 0%, rgba(105, 0, 199, .8) 100%) !important;" >
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" style="background-color: #0061f2 !important;background-image: linear-gradient(92deg, #0061f2 0%, rgba(105, 0, 199, .8) 100%) !important;">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -154,7 +201,7 @@
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar..."
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
                                 aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
@@ -346,263 +393,104 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
-                  <div class=" mb-2 header text-uppercase text-center">
-                    <h1>Módulo de control de activos durante el cambio de turno (CHECKLIST)</h1>
-                  </div>
-              
-                  <main class="contenedor">
-
-                    <form>
-                        <div class="pt-4">
-                            <p class="text-uppercase"><strong>Registro de operario :</strong></p>
-                        </div>
-                        <div class="row">
-                          <div class="form-group col-sm-3 col-md-6">
-                            <label for="opsalida" class="color-label">Operario de Salida :</label>
-                            <select id="inputState" class="form-control py-3 custom-auto-height">
-                                <option selected>[ Seleccionar Operario ]</option>
-                                <option>Operario_01</option>
-                                <option>Operario_02</option>
-                                <option>Operario_03</option>
-                            </select>
-                          </div>
-                          <div class="form-group col-sm-3 col-md-6">
-                            <label for="turnosalida" class="color-label">Turno :</label>
-                            <select id="inputState" class="form-control py-3 custom-auto-height">
-                                <option selected disabled>[ Seleccionar Turno ]</option>
-                                <option>06:00 A 14:00</option>
-                                <option>14:00 A 22:00</option>
-                                <option>22:00 A 06:00</option>
-                            </select>
-                          </div>
-                          <div class="form-group col-sm-3 col-md-6">
-                            <label for="opentrada" class="color-label">Operario de Entrada :</label>
-                            <select id="inputState" class="form-control py-3 custom-auto-height">
-                                <option selected disabled>[ Seleccionar Operario ]</option>
-                                <option>Operario_04</option>
-                                <option>Operario_05</option>
-                                <option>Operario_06</option>
-                            </select>
-                          </div>
-                          <div class="form-group col-sm-3 col-md-6">
-                            <label for="turnoentrada" class="color-label">Turno :</label>
-                            <select id="inputState" class="form-control py-3 custom-auto-height">
-                                <option selected>[ Seleccionar Turno ]</option>
-                                <option>06:00 A 14:00</option>
-                                <option>14:00 A 22:00</option>
-                                <option>22:00 A 06:00</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <div class="pt-4 pb-2">
-                            <p class="text-uppercase"><strong>Operatividad del carro eléctrico :</strong></p>
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group col-sm-3 col-md-6">
-                                <label for="opsalida" class="color-label">Carga de batería</label>
-                                <input type="text" class="form-control py-3 custom-auto-height" id="exampleInputEmail1" placeholder="ingresar carga">
+                      <div class="mb-2 header text-uppercase text-center">
+                        <h1>Módulo de formato de rutas</h1>
+                      </div>                
+                      <main class="contenedor">
+                        <div class="card">
+                          <form>
+                            <div class="pt-4">
+                                <p class="text-uppercase"><strong>Datos a ingresar :</strong></p>
                             </div>
-                            <div class="form-group col-sm-3 col-md-6">
-                                <label for="opsalida" class="color-label">Recorrido del carro eléctrico (KM.)</label>
-                                <input type="text" class="form-control py-3 custom-auto-height" id="exampleInputEmail1" placeholder="ingresar recorrido">
-                            </div>
-
-                            <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100 color-label" for="turnosalida">Limpieza y desinfección de asientos (6) :</label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Realizado" autocomplete="off"> Realizado
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Sin realizar" autocomplete="off"> Sin realizar
-                                </label>
-                            </div>
-                            <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100 color-label" for="turnosalida">Limpieza de carrocería exterior delantero y posterior :</label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Realizado" autocomplete="off"> Realizado
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Sin realizar" autocomplete="off"> Sin realizar
-                                </label>
-                            </div>
-                            <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100 color-label" for="turnosalida">Limpieza de pisos y ruedas :</label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Realizado" autocomplete="off"> Realizado
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Sin realizar" autocomplete="off"> Sin realizar
-                                </label>
-                            </div>
-                            <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100 color-label for="opentrada">Inspección y limpieza de neumáticos (4) :</label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
-                                </label>
-                            </div>
-
-                            <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100 color-label" for="opentrada">Inspección de funcionamiento (luces frontales y posteriores) :</label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
-                                </label>
-                            </div>
-                            <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100 color-label" for="opentrada">Inspección de funcionamiento de pedales de freno :</label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
-                                </label>
-                            </div>
-                            <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100 color-label" for="opentrada">Inspección de correas de seguridad :</label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
-                                </label>
-                            </div>
-                            <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100 color-label for="opentrada">Inspección conectores eléctricos de motor :</label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
-                                </label>
-                            </div>
-                            <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100 color-label" for="opentrada">Inspección de funcionamiento del tablero de instrumeto :</label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
-                                </label>
-                            </div>
-                            <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100 color-label for="opentrada">Inspección y funcionamiento del tablero de instrumento :</label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
-                                </label>
-                            </div>
-                            <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100 color-label for="opentrada">Funcionamiento de pedal de aceleración :</label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
-                                </label>
-                            </div>
-                            <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100 color-label" for="opentrada">Inspección de funcionamiento de freno de servicio y estacionamiento :</label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
-                                </label>
-                            </div>
-                            <div class="form-group col-sm-3 col-md-12 col-lg-12">
-                                <label class="w-100 color-label" for="opentrada">Inspección de funcionamiento de freno eléctrico :</label>
-                                <!-- <div class="btn-group btn-group-toggle" data-toggle="buttons"> -->
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
-                                </label>
-                                <label class="btn btn-outline-secondary mr-2">
-                                    <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
-                                </label>
-                                <!-- </div> -->
-                            </div>
-                            <div class="form-group col-sm-3 col-md-6">
-                                <label class="w-100 color-label" for="opsalida">Daños o desperfectos :</label>
-                                <textarea class="w-100 py-3 custom-auto-height" id="textarea" style="border: 1px solid rgb(196, 194, 194);border-radius: 5px; outline: none;"></textarea>
-                            </div>
-                            <div class="form-group col-sm-3 col-md-6">
-                                <label for="opsalida" class="color-label">Número de hallazgos :</label>
-                                <input type="number" class="form-control py-3 custom-auto-height" id="exampleInputEmail1" placeholder="ingresar número de hallazgo">
-                            </div>
-                            <div class="form-group col-sm-3 col-md-6">
-                                <label for="opsalida" class="color-label">Número de incidencias :</label>
-                                <input type="number" class="form-control py-3 custom-auto-height" id="exampleInputEmail1" placeholder="ingresar número de incidencias">
-                            </div>
-                            <!-- <div class="form-group col-sm-3 col-md-6">
-                                <label for="opsalida" class="color-label">Cargar evidencia 1 (foto) :</label>
-                                <input type="file" class="form-control-file py-3 custom-auto-height" id="exampleInputEmail1" accept="image/*">
-                            </div> -->
-
-                            <div class="form-group col-sm-3 col-md-6">
-                                <label for="opsalida" class="color-label">Cargar evidencia :</label>
-                            </div>
-
-                            <div class="profile-img">
-                                <img src="./img/gpem.png" alt="" />
-                                <div class="file btn btn-lg btn-primary">
-                                  Subir Foto
-                                  <input type="file" name="file" />
+                            <div class="row">
+                              <div class="form-group col-sm-3 col-md-6 col-lg-4">
+                                <label for="opsalida" class="color-label">Número de servicio :</label>
+                                <input type="text" class="form-control py-3 custom-auto-height" id="exampleInputEmail1" disabled>
+                              </div>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-4">
+                                <label for="opsalida" class="color-label">Fecha :</label>
+                                <input type="date" class="form-control py-3 custom-auto-height" id="exampleInputEmail1">
+                              </div>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-4">
+                                <label for="opsalida" class="color-label">Hora de servicio :</label>
+                                <input type="time" class="form-control py-3 custom-auto-height" id="exampleInputEmail1">
+                              </div>
+                              
+                              <div class="form-group col-sm-3 col-md-6 col-lg-12">
+                                <label class="w-100 color-label" for="opsalida">Ubicación :</label>
+                                <textarea class="w-100 p-2" id="textarea" style="border: 1px solid rgb(196, 194, 194);border-radius: 5px; outline: none;"></textarea>
+                              </div>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-4">
+                                <label for="turnoentrada" class="color-label">Turno de trabajo :</label>
+                                <select id="inputState" class="form-control py-3 custom-auto-height">
+                                    <option selected>[ Seleccionar turno ]</option>
+                                    <option>08:00 A 14:00</option>
+                                    <option>14:00 A 22:00</option>
+                                    <option>22:00 A 06:00</option>
+                                </select>
+                              </div>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-4">
+                                <label for="turnoentrada" class="color-label">Ruta :</label>
+                                <select id="inputState" class="form-control py-3 custom-auto-height">
+                                    <option selected>[ Seleccionar Ruta ]</option>
+                                    <option>RUTA01</option>
+                                    <option>RUTA02</option>
+                                    <option>RUTA03</option>
+                                </select>
+                              </div>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-4">
+                                <label for="turnoentrada" class="color-label">Ruta :</label>
+                                <select id="inputState" class="form-control py-3 custom-auto-height">
+                                    <option selected>[ Seleccionar COD. VEH. ]</option>
+                                    <option>VEH01</option>
+                                    <option>VEH01</option>
+                                    <option>VEH01</option>
+                                </select>
+                              </div>
+                              <div class="form-group col-sm-3 col-md-4">
+                                <label class="w-100 color-label" for="opsalida">Limpieza de los carros eléctricos :</label>
+                                <textarea class="w-100 p-2" id="textarea" style="border: 1px solid rgb(196, 194, 194);border-radius: 5px; outline: none;"></textarea>
+                              </div>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-4">
+                                <label for="turnoentrada" class="color-label">Nombre del conductor :</label>
+                                <select id="inputState" class="form-control py-3 custom-auto-height">
+                                    <option selected>[ Seleccionar conductor ]</option>
+                                    <option>CONDUCTOR01</option>
+                                    <option>CONDUCTOR02</option>
+                                    <option>CONDUCTOR03</option>
+                                </select>
+                              </div>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-4">
+                                <label for="turnoentrada" class="color-label">Nombre del coordinador :</label>
+                                <select id="inputState" class="form-control py-3 custom-auto-height">
+                                    <option selected>[ Seleccionar coordinador ]</option>
+                                    <option>COORDINADOR01</option>
+                                    <option>COORDINADOR02</option>
+                                    <option>COORDINADOR03</option>
+                                </select>
+                              </div>
+                              <div class="m-3">
+                                <h2 class="color-label" style="font-size: 17.5px;">Firma digital</h2>
+                                <canvas id="signature-pad"></canvas>
+                                <div id="buttons">
+                                    <button class="btn btn-danger" onclick="clearCanvas()">Limpiar</button>
+                                    <button class="btn btn-success" onclick="saveSignature()">Grabar</button>
                                 </div>
+                                <img id="signature-image" style="display: none;" alt="Signature Image"/>
+                              </div>
+                              
                             </div>
+        
+                            <div  class="mt-4">
+                                <button type="submit" class="btn btn-primary pt-3 pb-3 pl-4 pr-4 text-uppercase">Guardar</button>
+                            </div>
+                          </form>
                         </div>
-
-                        <div  class="mt-4">
-                            <button type="submit" class="btn btn-primary pt-2 pb-2 pl-4 pr-4 text-uppercase">Guardar</button>
-                        </div>
-                      </form>
-
-                  </main>
-
+                      </main>
                 </div>
                 <!-- /.container-fluid -->
-
             </div>
             <!-- End of Main Content -->
-            <hr class="sidebar-divider d-none d-md-block">
             <!-- Footer -->
             <footer class="text-center p-4">
               <p>
@@ -625,493 +513,65 @@
 
     
     <script>
-        // OBJETOS QUE SIMULAN CONSUMO DE BASE DE DATOS
-        const personal = [
-            {
-                pers_codigo: 1,
-                idcargo:1,
-                idarea:1,
-                pers_nombres: "Fernando Edilberto",
-                pers_apellidos: "Hernández Gonzales",
-                pers_alias:"fernando",
-                pers_dni: "50505050",
-                pers_fechaIngreso: "2024-01-01",
-                pers_fechaNac: "1980-01-01",
-                pers_direccion: "Dirección 100",
-                pers_telefono:"989898989",
-                pers_telefono2:"979798987",
-                pers_fechaCese:"2024-02-10",
-                pers_motivoCese:"Solicitud",
-                pers_estado:2,
-                pers_nivel:null,
-                bib_acceso: 1,
-                ccrh:0,
-                pers_actualizacion:null
-            },
-            {
-                pers_codigo: 2,
-                idcargo:2,
-                idarea:1,
-                pers_nombres: "Maria Fernanda",
-                pers_apellidos: "Perez Lopez",
-                pers_alias:"maria",
-                pers_dni: "40404040",
-                pers_fechaIngreso: "2024-02-01",
-                pers_fechaNac: "1988-02-01",
-                pers_direccion: "Dirección 200",
-                pers_telefono:"979797979",
-                pers_telefono2:"960606060",
-                pers_fechaCese:"2024-06-10",
-                pers_motivoCese:"Solicitud",
-                pers_estado:2,
-                pers_nivel:null,
-                bib_acceso: 1,
-                ccrh:0,
-                pers_actualizacion:null
-            }
-        ]
+      const canvas = document.getElementById('signature-pad');
+      const ctx = canvas.getContext('2d');
+      let drawing = false;
 
-        const marcaciones=[
-            {
-                idmarcacion:1,
-                idpersonal:1,
-                idturno:1,
-                fecha:"2024-06-13",
-                condicion:1,
-                turnoinicio: "08:00:00",
-                turnofinal:"18:00:00",
-                programacion1:"2024-06-13 08:00:00",
-                programacion2:"2024-06-13 18:00:00",
-                asistencia1:null,
-                asistencia2:null,
-                desayuno1:null,
-                desayuno2:null,
-                refrigerio1:null,
-                refrigerio2:null,
-                tecnicosino:0,
-                estado:0,
-                observacion:null,
-                ccnivel:51,
-                actualizacion:null,
-                gps_direccion:null,
-                gps_longitud:null,
-                gps_latitud:null
-            },
-            {
-                idmarcacion:2,
-                idpersonal:2,
-                idturno:1,
-                fecha:"2024-06-13",
-                condicion:1,
-                turnoinicio: "08:00:00",
-                turnofinal:"18:00:00",
-                programacion1:"2024-06-13 08:00:00",
-                programacion2:"2024-06-13 18:00:00",
-                asistencia1:null,
-                asistencia2:null,
-                desayuno1:null,
-                desayuno2:null,
-                refrigerio1:null,
-                refrigerio2:null,
-                tecnicosino:0,
-                estado:0,
-                observacion:null,
-                ccnivel:51,
-                actualizacion:null,
-                gps_direccion:null,
-                gps_longitud:null,
-                gps_latitud:null
-            }
-        ]
+      // Set canvas width and height
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
 
-        const areas =[
-            {
-                idarea: 1,
-                area: "Sistemas",
-                estado: 2,
-                usuario: null
-            },
-            {
-                idarea: 2,
-                area: "Administracion",
-                estado: 2,
-                usuario: null
-            }
-        ]
+      // Event listeners for mouse
+      canvas.addEventListener('mousedown', startDrawing);
+      canvas.addEventListener('mouseup', stopDrawing);
+      canvas.addEventListener('mousemove', draw);
 
-        const cargos =[
-            {
-                idcargo: 1,
-                idarea : 1,
-                cargo : "Programador",
-                estado: 2,
-                usuario:null
-            },
-            {
-                idcargo: 2,
-                idarea : 1,
-                cargo : "Analista TI",
-                estado: 2,
-                usuario:null
-            }
-        ]
+      // Event listeners for touch
+      canvas.addEventListener('touchstart', startDrawing, { passive: true });
+      canvas.addEventListener('touchend', stopDrawing, { passive: true });
+      canvas.addEventListener('touchmove', draw, { passive: true });
 
-        const turnos =[
-            {
-                idturno : 1,
-                turno :"diurno",
-                idturnomtn : 0,
-                horainicio : "08:00:00",
-                horafin : "18:00:00",
-                cambiodia : 0,
-                tipo : 0,
-                bancohrs : 0,
-                estado : 2,
-                actualizacion: 1
-            }
-        ];
+      function startDrawing(event) {
+          drawing = true;
+          ctx.beginPath();
+          ctx.moveTo(getX(event), getY(event));
+      }
 
+      function stopDrawing() {
+          drawing = false;
+          ctx.closePath();
+      }
 
-        const navegacionFija = () => {
-            const headerFijo = document.querySelector('#header');
-            const observer = new IntersectionObserver((entries) => {
-                if (entries[0].isIntersecting) {
-                headerFijo.classList.remove('fijo');
-                } else {
-                headerFijo.classList.add('fijo');
-                }
-            });
-            observer.observe(document.querySelector('#mostrar'));
-        };
-        navegacionFija();
+      function draw(event) {
+          if (!drawing) return;
+          ctx.lineTo(getX(event), getY(event));
+          ctx.stroke();
+      }
 
+      function getX(event) {
+          if (event.touches) {
+              return event.touches[0].clientX - canvas.getBoundingClientRect().left;
+          }
+          return event.clientX - canvas.getBoundingClientRect().left;
+      }
 
+      function getY(event) {
+          if (event.touches) {
+              return event.touches[0].clientY - canvas.getBoundingClientRect().top;
+          }
+          return event.clientY - canvas.getBoundingClientRect().top;
+      }
 
-        // FUNCIÓN QUE NO PERMITE INGRESO DE CARACTERES NO NÚMERICOS EN EL CAMPO DNI     
-        const restricText = (idInput) =>{
-            document.querySelector(idInput).addEventListener("input", function(event) {
-                let value = event.target.value;
-                event.target.value = value.replace(/\D/g, "");
-            });
-        }
-        // LLAMANDO FUNCIÓN
-        restricText("#nroDni");
+      function clearCanvas() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
 
-        // FUNCIÓN QUE LIMITA INGRESO DE DÍGITOS EN EL INPUT
-        const limitInputToDigits = (inputSelector, maxLength) => {
-            document.querySelector(inputSelector).addEventListener('input', function (e) {
-                this.value = this.value.replace(/\D/g, '').slice(0, maxLength);
-            });
-        }
-        // LLAMANDO FUNCIÓN
-        limitInputToDigits('#nroDni', 8);
-
-        
-        //FUNCIÓN PARA OBTENER INFO DE COLABORADOR POR SU 'ID' 
-        const getPersonalDetails = (idPersonal) => {
-            const person = personal.find(p => p.pers_codigo === idPersonal);
-            if (!person) {
-                return null;
-                console.log("El ID no está registrado en la base de datos"); 
-            }
-            const cargo = cargos.find(c => c.idcargo === person.idcargo);
-            const area = areas.find(a => a.idarea === person.idarea);
-            const marcacion = marcaciones.filter(m => m.idpersonal === idPersonal);
-
-            return { 
-                ...person,
-                cargo: cargo ? cargo.cargo : null,
-                area: area ? area.area : null,
-                marcaciones: marcacion
-            };
-        }
-
-        // FUNCIÓN PARA OBTENER EL 'ID' DE COLABORADOR POR SU DNI
-        const getIdByDni = (nroDni) => {
-            const person = personal.find(p => p.pers_dni === nroDni);
-            return person ? person.pers_codigo : null;
-        }
-
-        // FUNCIÓN PARA OBTENER INFORMACIÓN DE COLABORADOR POR DNI
-        const consultarDni = () => {
-            const nroDni = document.querySelector('#nroDni').value;
-            // VALIDACIONES
-            if (nroDni === '') {
-                alert('Por favor ingrese el número de DNI.');
-                console.log('Por favor ingrese el número de DNI.');
-                return;
-            }
-            if (nroDni.length !== 8 || !/^\d{8}$/.test(nroDni)) {
-                alert('El DNI debe contener exactamente 8 dígitos.');
-                document.querySelector('#nroDni').value = ''; 
-                return false;
-            }
-            // OBTENER EL 'ID' DE COLABORADOR POR DNI
-            const idPersonal = getIdByDni(nroDni);
-            if (!idPersonal) {
-                alert('El DNI ingresado no existe.');
-                console.log('El DNI ingresado no existe.');
-                document.querySelector('#nroDni').value = ''; 
-                return;
-            }
-            // OBTENER DETALLES DEL COLABORADOR POR SU 'ID' Y LUEGO CARGAR EN FORMULARIO
-            const detalleColaborador = getPersonalDetails(idPersonal);
-            
-            if (detalleColaborador) {
-                document.getElementById('codigo').value = detalleColaborador.pers_codigo;
-                document.getElementById('nombre').value = detalleColaborador.pers_nombres;
-                document.getElementById('apellido').value = detalleColaborador.pers_apellidos;
-                document.getElementById('dni').value = detalleColaborador.pers_dni;
-                document.getElementById('cargo').value = detalleColaborador.cargo;
-
-                // Habilitar botones según las marcaciones o el estado del colaborador (implementación futura)
-                console.log(detalleColaborador);
-            }
-        }
-
-        // FUNCIÓN QUE PERMITE BUSCAR SI EXISTE DNI PRESIONANDO ENTER
-        const searchByPressingEnter = (idSelector, metodo)=>{
-            document.querySelector(idSelector).addEventListener('change', metodo);
-        }
-        // LLAMANDO FUNCIÓN
-        searchByPressingEnter('#nroDni',consultarDni);
-
-        // FUNCIÓN QUE RECIBE UN ARRAY DE LOS ID DE LOS INPUTS Y LOS LIMPIA
-        const clearInputs = (inputIds) => {
-            inputIds.forEach(id => {
-                const element = document.querySelector(`#${id}`);
-                if (element) {
-                    element.value = "";
-                }
-            });
-        };
-
-        // FUNCIÓN QUE LLAME A LA FUNCION 'clearInputs' Y COLOCA FOCO EN INPUT DEL DNI 
-        const clearDetailsPerson = () => {
-            clearInputs(['codigo', 'nombre', 'apellido', 'dni', 'cargo', 'nroDni']);
-            document.getElementById('nroDni').focus();
-        };
-
-
-
-        // BOTONES PRINCIPALES
-        const btnAsistencia = document.querySelector('#btnAsistencia');
-        const btnRefrigerio = document.querySelector('#btnRefrigerio');
-        
-        // BOTONES PARA FUNCIONALIDAS DE MODAL
-        const modal = document.getElementById("modal");
-        
-        // INICIALIZANDO MODAL EN NONE.
-        modal.style.display = "none";
-
-        // FUNCIÓN PARA MOSTRAR/OCULTAR BOTONES
-        const toggleButtons = (ingresoClass, salidaClass, show) => {
-            const action = show ? 'remove' : 'add';
-            document.querySelector(ingresoClass).classList[action]('hidden');
-            document.querySelector(salidaClass).classList[action]('hidden');
-        }
-
-        // FUNCIÓN PARA REMOVER LA CLASE 'hidden' DE LOS BOTONES
-        const removeHiddenClass = () => {
-            const hiddenButtons = document.querySelectorAll('.hidden');
-            hiddenButtons.forEach(button => button.classList.remove('hidden'));
-        }
-
-        // FUNCIÓN QUE AGREGA ATTRIBUTE 'disabled' A ELEMENTO QUE SE LE PASA SU 'Id'
-        const setAttributeButton = (id) => {
-            document.querySelector(id).setAttribute("disabled", "disabled");
-        }
-
-        // FUNCIÓN PARA BOTONES DE MODAL SI PRESIONAS ASISTENCIA Ó REFRIGERIO  
-        const handleButtonClick = (buttonType) => {
-            const nroDni = document.querySelector('#nroDni').value.trim();
-            if (nroDni === '') {
-                alert('NO SE RECONOCE EL DNI\nVerifique antes de continuar')
-                console.log('NO SE RECONOCE EL DNI\nVerifique antes de continuar');
-                return null;
-            }
-            
-            modal.style.display = 'flex';
-
-            if (buttonType === 'asistencia') {
-                toggleButtons('.boton-ingreso-ref', '.boton-salida-ref', false);
-                toggleButtons('.boton-ingreso-lab', '.boton-salida-lab', true);
-            } 
-            if (buttonType === 'refrigerio') {
-                toggleButtons('.boton-ingreso-lab', '.boton-salida-lab', false);
-                toggleButtons('.boton-ingreso-ref', '.boton-salida-ref', true);
-            }
-        };
-
-        // EVENTO CLICK EN FUNCIÓN 'handleButtonClick' PARA ASISTENCIA
-        btnAsistencia.addEventListener('click', () => {
-            handleButtonClick('asistencia')
-        });
-
-        // EVENTO CLICK EN FUNCIÓN 'handleButtonClick' PARA REFRIGERIO
-        btnRefrigerio.addEventListener('click', () => {
-            handleButtonClick('refrigerio')
-        });
-
-        // FUNCIÓN PARA CERRAR MODAL Y LIMPIAR DETALLES DE COLABORADOR
-        const closeModalAndClearDetails = () => {
-            modal.style.display = "none";
-            clearDetailsPerson(); 
-        };
-
-        // ASIGNANDO EVENTOS PARA CERRA MODAL
-        document.addEventListener('click', (event) => {
-            if (event.target.classList.contains('cerrar') || event.target === modal) {
-                closeModalAndClearDetails();
-            }
-        });
-
-        // FUNCIÓN PARA OBTENER FECHA CORTA DE REGISTRO DE ACTIVIDADES
-        const obtenerFechaActualCorta = () => {
-            const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-            return new Date().toLocaleDateString('es-ES', options);
-        }
-
-        // FUNCIÓN QUE MUESTRA BOTÓN DE INGRESO-SALIDA LABORES E INGRESO-SALIDA REFRIGERIO
-        const removeInactiveClass = (id) => {
-            document.querySelector(id).classList.remove('inactivo'); 
-        }
-
-        // FUNCIÓN QUE MANEJA EVENTO CLICK PARA LOS BOTONES DEL MODAL
-        const handleModalButtonClick = (event) => {
-            const buttonId = event.target.id;
-            console.log(buttonId);
-
-            switch (buttonId) {
-                case 'modalBtnIngresoLabores':
-                    let currentDate = document.querySelector("#entrada-fecha");
-                    currentDate.value = obtenerFechaActualCorta();
-                    // AGREGAR LÓGICA DE NEGOCIO
-                    removeInactiveClass("#btnIngresoLabores");
-                    break;
-                case 'modalBtnSalidaLabores':
-                    // AGREGAR LÓGICA DE NEGOCIO
-                    removeInactiveClass("#btnSalidaLabores");
-                    break;
-                case 'modalBtnIngresoRefrigerio':
-                    // AGREGAR LÓGICA DE NEGOCIO
-                    removeInactiveClass("#btnIngresoRefrigerio");
-                    break;
-                case 'modalBtnSalidaRefrigerio':
-                    // AGREGAR LÓGICA DE NEGOCIO
-                    removeInactiveClass("#btnSalidaRefrigerio");
-                    break;
-                default:
-                    return; // SALIR
-            }
-            closeModalAndClearDetails();
-        };
-
-        // CONFIGURANDO UN SOLO CLICK PARA EL MODAL
-        modal.addEventListener('click', handleModalButtonClick);
-
-
-        /*  ===========================================================
-            MOSTRAR HORA Y FECHA ACTUAL (DIA SENANA, DIA, MES Y AÑO) : 
-            ===========================================================
-        */ 
-        // FUNCIÓN PARA OBTENER HORA ACTUAL EN FORMATO AM/PM
-        const obtenerHoraActual = () => {
-            const ahora = new Date();
-            let horas = ahora.getHours();
-            let minutos = ahora.getMinutes();
-            const ampm = horas >= 12 ? 'p.m.' : 'a.m.';
-            horas = horas % 12;
-            horas = horas ? horas : 12; // las 0 horas se convierten a 12
-            minutos = minutos < 10 ? '0' + minutos : minutos;
-            return horas + ':' + minutos + ' ' + ampm;
-        }
-
-        // FUNCIÓN PARA OBTENER LA FECHA ACTUAL EN FORMATO: DÍAS DE LA SEMANA, DÍAS, MES Y AÑO
-        const obtenerFechaActual = () => {
-            const opcionesFecha = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            return new Date().toLocaleDateString('es-ES', opcionesFecha);
-        }
-
-        // FUNCIÓN PARA LA HORA Y FECHA ACTUAL CADA DE SEGUNDO
-        const actualizarHoraFecha = () => {
-            const horaActualElemento = document.getElementById('horaActual');
-            const fechaActualElemento = document.getElementById('fechaActual');
-
-            horaActualElemento.textContent = obtenerHoraActual();
-            fechaActualElemento.textContent = obtenerFechaActual();
-        }
-        // LLAMANDO FUNCIÓN
-        actualizarHoraFecha();
-
-        // MÉTODO QUE ACTUALIZA LA FUNCIÓN 'actualizarHoraFecha' CADA SEGUNDO
-        setInterval(actualizarHoraFecha, 1000);
-
-        //GEOLOCALIZACIÓN
-        async function obtenerDireccion(latitud, longitud) {
-            const url = `https://nominatim.openstreetmap.org/reverse?lat=${latitud}&lon=${longitud}&format=json`;
-
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
-                const address = data.display_name;
-                document.getElementById("direccion").textContent = address;
-                
-                document.querySelector('#mapa').innerHTML = `
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d3903.8292716492524!2d${longitud}!3d${latitud}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d${latitud}!2d${longitud}!4m3!3m2!1d${latitud}!2d${longitud}!5e0!3m2!1ses-419!2spe!4v1717531069082!5m2!1ses-419!2spe" 
-                    width=100% 
-                    height=100% 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            `;
-            } catch (error) {
-                console.error('Error al obtener la dirección:', error);
-            }
-        }
-
-        async function obtenerGeolocalizacion() {
-            if (navigator.geolocation) {
-                try {
-                    const position = await new Promise((resolve, reject) => {
-                        navigator.geolocation.getCurrentPosition(resolve, reject);
-                    });
-                    const latitud = position.coords.latitude;
-                    const longitud = position.coords.longitude;
-
-                    document.getElementById("latitud").textContent = latitud;
-                    document.getElementById("longitud").textContent = longitud;
-
-                    await obtenerDireccion(latitud, longitud);
-
-                    // Verificación de las coordenadas
-                    console.log(`Latitud: ${latitud}, Longitud: ${longitud}`);
-
-                } catch (error) {
-                    // Manejar errores
-                    switch (error.code) {
-                        case error.PERMISSION_DENIED:
-                            alert("El usuario ha denegado la solicitud de geolocalización.");
-                            break;
-                        case error.POSITION_UNAVAILABLE:
-                            alert("La información de ubicación no está disponible.");
-                            break;
-                        case error.TIMEOUT:
-                            alert("Se ha agotado el tiempo para obtener la ubicación del usuario.");
-                            break;
-                        case error.UNKNOWN_ERROR:
-                            alert("Se ha producido un error desconocido.");
-                            break;
-                    }
-                }
-            } else {
-                alert("Geolocalización no soportada por este navegador.");
-            }
-        }
-        obtenerGeolocalizacion();
+      function saveSignature() {
+          const dataURL = canvas.toDataURL('image/png');
+          const img = document.getElementById('signature-image');
+          img.src = dataURL;
+          img.style.display = 'block';
+      }
     </script>
 
     <!-- Bootstrap core JavaScript-->

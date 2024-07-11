@@ -51,6 +51,22 @@
             margin-bottom: 2rem;
           }
         }
+        #signature-pad {
+            border: 1px solid #00000044;
+            width: auto;
+            height: 200px;
+            touch-action: none;
+        }
+        #buttons {
+            margin-top: 10px;
+        }
+
+        @media(max-width:767){
+          #signature-pad{
+            width: 100px;
+            height: 200px;
+          }
+        }
     </style>
 </head>
 
@@ -110,6 +126,15 @@
                 <i class="fas fa-object-ungroup"></i>
                 <span>Registro de incidencias</span></a>
             </li>
+
+            
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="formato-rutas.html">
+                    <i class="fas fa-fw fa-table"></i>
+                <span>Formato de rutas</span></a>
+            </li>
+  
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
@@ -399,7 +424,7 @@
                           
                           <div class="form-group col-sm-3 col-md-6">
                             <label class="w-100 color-label" for="opsalida">Descripción de incidencia (detallado) :</label>
-                            <textarea class="w-100" id="textarea" style="border: 1px solid rgb(196, 194, 194);border-radius: 5px; outline: none;"></textarea>
+                            <textarea class="w-100 p-2" id="textarea" style="border: 1px solid rgb(196, 194, 194);border-radius: 5px; outline: none;"></textarea>
                           </div>
 
                           <div class="form-group col-sm-3 col-md-6">
@@ -412,14 +437,24 @@
                             </select>
                           </div>
 
-                          <div class="form-group col-sm-3 col-md-6">
+                          <div class="form-group col-sm-3 col-md-6 col-lg-6">
                             <label class="w-100 color-label" for="opsalida">Lugar :</label>
-                            <textarea class="w-100" id="textarea" style="border: 1px solid rgb(196, 194, 194);border-radius: 5px; outline: none;"></textarea>
+                            <textarea class="w-100 p-2" id="textarea" style="border: 1px solid rgb(196, 194, 194);border-radius: 5px; outline: none;"></textarea>
                           </div>
 
-                          <div class="form-group col-sm-3 col-md-6">
-                            <label for="opsalida" class="color-label">Firma digital (nombre completo y DNI) :</label>
-                            <textarea class="w-100" id="textarea" style="border: 1px solid rgb(196, 194, 194);border-radius: 5px; outline: none;"></textarea>
+                          <div class="form-group col-sm-3 col-md-6 col-lg-6">
+                            <label for="opsalida" class="color-label">Nombre completo y DNI :</label>
+                            <input type="text" class="form-control py-3 custom-auto-height" id="exampleInputEmail1">
+                          </div>
+
+                          <div class="m-3">
+                            <h2 class="color-label" style="font-size: 17.5px;">Firma digital</h2>
+                            <canvas id="signature-pad"></canvas>
+                            <div id="buttons">
+                                <button class="btn btn-danger" onclick="clearCanvas()">Limpiar</button>
+                                <button class="btn btn-success" onclick="saveSignature()">Grabar</button>
+                            </div>
+                            <img id="signature-image" style="display: none;" alt="Signature Image"/>
                           </div>
 
                           <div class="form-group col-md-6 col-lg-12 pl-3 pr-0">
@@ -463,6 +498,69 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
+
+    
+    <script>
+        const canvas = document.getElementById('signature-pad');
+        const ctx = canvas.getContext('2d');
+        let drawing = false;
+  
+        // Set canvas width and height
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+  
+        // Event listeners for mouse
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mousemove', draw);
+  
+        // Event listeners for touch
+        canvas.addEventListener('touchstart', startDrawing, { passive: true });
+        canvas.addEventListener('touchend', stopDrawing, { passive: true });
+        canvas.addEventListener('touchmove', draw, { passive: true });
+  
+        function startDrawing(event) {
+            drawing = true;
+            ctx.beginPath();
+            ctx.moveTo(getX(event), getY(event));
+        }
+  
+        function stopDrawing() {
+            drawing = false;
+            ctx.closePath();
+        }
+  
+        function draw(event) {
+            if (!drawing) return;
+            ctx.lineTo(getX(event), getY(event));
+            ctx.stroke();
+        }
+  
+        function getX(event) {
+            if (event.touches) {
+                return event.touches[0].clientX - canvas.getBoundingClientRect().left;
+            }
+            return event.clientX - canvas.getBoundingClientRect().left;
+        }
+  
+        function getY(event) {
+            if (event.touches) {
+                return event.touches[0].clientY - canvas.getBoundingClientRect().top;
+            }
+            return event.clientY - canvas.getBoundingClientRect().top;
+        }
+  
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+  
+        function saveSignature() {
+            const dataURL = canvas.toDataURL('image/png');
+            const img = document.getElementById('signature-image');
+            img.src = dataURL;
+            img.style.display = 'block';
+        }
+      </script>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
