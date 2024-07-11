@@ -30,6 +30,27 @@
         h1{
             color: #505cfd;
         }
+        .container-fluid{
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+        }
+        .card{
+          padding: 1rem;
+        }
+
+        @media(min-width:992px){
+          .container-fluid{
+            padding-left: 2rem;
+            padding-right: 2rem;
+          }
+          .card{
+            padding: 2rem;
+            padding-top: 0;
+          }
+          h1{
+            margin-bottom: 2rem;
+          }
+        }
     </style>
 </head>
 
@@ -351,7 +372,7 @@
                     </div>                
                     <main class="contenedor">
                       <!-- **** DIARIO ***** -->
-                      <div class="card p-lg-4 mb-4">
+                      <div class="card mb-4">
                         <div class="pt-4">
                           <p class="text-uppercase mb-0"><strong>Diario :</strong></p>
                         </div>
@@ -369,10 +390,10 @@
                   
                             <!-- DataTales Example -->
                             <div class="card shadow mb-4 col-lg-12">
-                                <div class="card-header pt-2 pb-2">
-                                    <h6 class="m-0 font-weight-bold text-primary">LISTADO DE ASISTENCIA DE OPERARIO</h6>
-                                </div>
-                                <div class="card-body">
+                                <!-- <div class="card-header pt-2 pb-2"> -->
+                                    <h6 class="m-0 font-weight-bold text-primary mt-4">LISTADO DE ASISTENCIA DE OPERARIO</h6>
+                                <!-- </div> -->
+                                <div class="card-body pl-0 pr-0">
                                     <div class="table-responsive">
                                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                             <thead>
@@ -425,10 +446,10 @@
                   
                             <!-- DataTales Example -->
                             <div class="card shadow mb-4 col-lg-12">
-                                <div class="card-header pt-2 pb-2">
-                                    <h6 class="m-0 font-weight-bold text-primary">LISTADO DE ACTIVIDADES RUTINARIAS</h6>
-                                </div>
-                                <div class="card-body">
+                                <!-- <div class="card-header pt-2 pb-2"> -->
+                                    <h6 class="m-0 font-weight-bold text-primary mt-4">LISTADO DE ACTIVIDADES RUTINARIAS</h6>
+                                <!-- </div> -->
+                                <div class="card-body pl-0 pr-0">
                                     <div class="table-responsive">
                                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                             <thead>
@@ -472,7 +493,7 @@
                       </div>
                       
                       <!-- **** MENSUAL ***** -->
-                      <div class="card p-lg-4 mt-4">
+                      <div class="card mt-4">
                         <div class="pt-4">
                           <p class="text-uppercase mb-0"><strong>Mensual :</strong></p>
                         </div>
@@ -563,7 +584,7 @@
                         </div>
                       </div>
                       
-                      <div class="card p-lg-4 mt-4">
+                      <div class="card mt-4">
                         <!-- **** ANUAL **** -->
                         <div class="pt-4">
                             <p class="text-uppercase mb-0"><strong>Anual :</strong></p>

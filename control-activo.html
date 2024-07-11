@@ -30,6 +30,28 @@
         h1{
             color: #505cfd;
         }
+        .container-fluid{
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+        }
+        .card{
+          padding: 1rem;
+        }
+
+        @media(min-width:992px){
+          .container-fluid{
+            padding-left: 2rem;
+            padding-right: 2rem;
+          }
+          .card{
+            padding: 2rem;
+            padding-top: 0;
+          }
+          h1{
+            margin-bottom: 2rem;
+          }
+        }
+
     </style>
 </head>
 
@@ -352,8 +374,8 @@
                   </div>
               
                   <main class="contenedor">
-
-                    <form>
+                    <div class="card card--mod">
+                      <form>
                         <div class="pt-4">
                             <p class="text-uppercase"><strong>Registro de operario :</strong></p>
                         </div>
@@ -572,11 +594,6 @@
                                 <label for="opsalida" class="color-label">Número de incidencias :</label>
                                 <input type="number" class="form-control py-3 custom-auto-height" id="exampleInputEmail1" placeholder="ingresar número de incidencias">
                             </div>
-                            <!-- <div class="form-group col-sm-3 col-md-6">
-                                <label for="opsalida" class="color-label">Cargar evidencia 1 (foto) :</label>
-                                <input type="file" class="form-control-file py-3 custom-auto-height" id="exampleInputEmail1" accept="image/*">
-                            </div> -->
-
                             <div class="form-group col-sm-3 col-md-6 col-lg-12">
                                 <label for="opsalida" class="color-label">Cargar evidencia :</label>
                             </div>
@@ -589,17 +606,16 @@
                                 </div>
                             </div>
                         </div>
-
                         <div  class="mt-4">
-                            <button type="submit" class="btn btn-primary pt-2 pb-2 pl-4 pr-4 text-uppercase">Guardar</button>
+                            <button type="submit" class="btn btn-primary pt-3 pb-3 pl-4 pr-4 text-uppercase">Guardar</button>
                         </div>
                       </form>
-
+                    </div>
+                    
                   </main>
 
                 </div>
                 <!-- /.container-fluid -->
-
             </div>
             <!-- End of Main Content -->
             <hr class="sidebar-divider d-none d-md-block">

@@ -30,6 +30,27 @@
         h1{
             color: #505cfd;
         }
+        .container-fluid{
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+        }
+        .card{
+          padding: 1rem;
+        }
+
+        @media(min-width:992px){
+          .container-fluid{
+            padding-left: 2rem;
+            padding-right: 2rem;
+          }
+          .card{
+            padding: 2rem;
+            padding-top: 0;
+          }
+          h1{
+            margin-bottom: 2rem;
+          }
+        }
     </style>
 </head>
 
@@ -154,7 +175,7 @@
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar..."
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
                                 aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
@@ -346,140 +367,173 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
+                      <div class="mb-2 header text-uppercase text-center">
+                        <h1>Módulo de programación par la asignación de conductores y rutas</h1>
+                      </div>                
+                      <main class="contenedor">
+                        <div class="card">
+                          <form>
+                            <div class="pt-4">
+                                <p class="text-uppercase"><strong>Asignación de vehículos :</strong></p>
+                            </div>
+                            <div class="row">
+                              <div class="form-group col-sm-3 col-md-6 col-lg-6">
+                                <label for="opsalida" class="color-label">Fecha inicial :</label>
+                                <input type="date" class="form-control py-3 custom-auto-height" id="exampleInputEmail1">
+                              </div>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-6">
+                                <label for="opsalida" class="color-label">Fecha final :</label>
+                                <input type="date" class="form-control py-3 custom-auto-height" id="exampleInputEmail1">
+                              </div>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-6">
+                                <label for="turnoentrada" class="color-label">Nombre y apellido :</label>
+                                <select id="inputState" class="form-control py-3 custom-auto-height">
+                                    <option selected>[ Seleccionar operario ]</option>
+                                    <option>Operario01</option>
+                                    <option>Operario02</option>
+                                    <option>Operario03</option>
+                                </select>
+                              </div>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-3">
+                                <label for="opsalida" class="color-label">Código operario :</label>
+                                <input type="text" class="form-control py-3 custom-auto-height" id="exampleInputEmail1" disabled>
+                              </div>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-3">
+                                <label for="turnoentrada" class="color-label">Código de vehículo :</label>
+                                <select id="inputState" class="form-control py-3 custom-auto-height">
+                                    <option selected>[ Seleccionar vehículo ]</option>
+                                    <option>VEH01</option>
+                                    <option>VEH02</option>
+                                    <option>VEH03</option>
+                                </select>
+                              </div>
 
-                  <div class="p-3 mb-2 header text-uppercase text-center">
-                    <h1>Sistema de Control de Asistencias</h1>
-                  </div>
-              
-                  <div id='mostrar'></div>
 
-                  <main class="contenedor grid-lg">
+                              <div class="form-group col-sm-3 col-md-6 col-lg-6">
+                                <label for="opsalida" class="color-label">Fecha inicial :</label>
+                                <input type="date" class="form-control py-3 custom-auto-height" id="exampleInputEmail1">
+                              </div>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-6">
+                                <label for="opsalida" class="color-label">Fecha final :</label>
+                                <input type="date" class="form-control py-3 custom-auto-height" id="exampleInputEmail1">
+                              </div>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-3">
+                                <label for="turnoentrada" class="color-label">Turno :</label>
+                                <select id="inputState" class="form-control py-3 custom-auto-height">
+                                    <option selected>[ Selecciona turno ]</option>
+                                    <option>Mañana</option>
+                                    <option>Tarde</option>
+                                    <option>Noche</option>
+                                </select>
+                              </div>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-3">
+                                <label for="turnoentrada" class="color-label">Horario :</label>
+                                <select id="inputState" class="form-control py-3 custom-auto-height">
+                                    <option selected>[ Selecciona horario ]</option>
+                                    <option>08:00 A 14:00</option>
+                                    <option>14:00 A 22:00</option>
+                                    <option>22:00 A 06:00</option>
+                                </select>
+                              </div>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-3">
+                                <label for="opsalida" class="color-label">Código vehículo :</label>
+                                <input type="text" class="form-control py-3 custom-auto-height" id="exampleInputEmail1" disabled>
+                              </div>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-3">
+                                <label for="opsalida" class="color-label">Código operario :</label>
+                                <input type="text" class="form-control py-3 custom-auto-height" id="exampleInputEmail1" disabled>
+                              </div>
+                              <div class="form-group col-sm-3 col-md-12 col-lg-12">
+                                <label class="w-100 color-label" for="opentrada">Días de la semana :</label>
+                                <label class="btn btn-outline-success mr-2">
+                                    <input type="checkbox" name="countries[]" value="Bueno" autocomplete="off"> Lunes
+                                </label>
+                                <label class="btn btn-outline-success mr-2">
+                                    <input type="checkbox" name="countries[]" value="Mal estado" autocomplete="off"> Martes
+                                </label>
+                                <label class="btn btn-outline-success mr-2">
+                                    <input type="checkbox" name="countries[]" value="No tiene" autocomplete="off"> Miercoles
+                                </label>
+                                <label class="btn btn-outline-success mr-2">
+                                  <input type="checkbox" name="countries[]" value="No tiene" autocomplete="off"> Jueves
+                                </label>
+                                <label class="btn btn-outline-success mr-2">
+                                  <input type="checkbox" name="countries[]" value="No tiene" autocomplete="off"> Viernes
+                                </label>
+                              </div>
+                            </div>
+                            <div  class="mt-2 mb-3">
+                                <button type="submit" class="btn btn-primary pt-3 pb-3 pl-4 pr-4 text-uppercase">Guardar</button>
+                            </div>
 
-                    <div class="card mb-3 grid-2 dni-grid">
-                      <h2 class="titulo-card">Documento de identidad</h2>
-                      <div class="form-group">
-                        <label for="nroDni">Nro. DNI</label>
-                        <input type="tel" class="form-control pt-4 pb-4" id="nroDni">
-                      </div>
-                      <div class="form-group text-center">
-                        <button type="button" class="btn btn-primary text-uppercase p-3 m-3" id="btnAsistencia">Asistencia</button>
-                        <button type="button" class="btn btn-danger text-uppercase p-3" id="btnRefrigerio">Refrigerio</button>
-                      </div>
-                    </div>
-                    
-                    <div class="card mb-3 grid-2 informacion-grid">
-                      <h2 class="titulo-card">Información del usuario</h2>               
-                      <div class="contenedor-foto grid-foto">
-                        <img src="img/foto.png" alt="Foto del usuario">
-                      </div>
-                      <div class="form-group grid-codigo flex-dato">
-                        <label class="label-dato" for="codigo">Código</label>
-                        <input type="text" class="form-control pt-4 pb-4" id="codigo" disabled>
-                      </div>
-                      <div class="form-group grid-nombre flex-dato">
-                        <label class="label-dato" for="nombre">Nombres</label>
-                        <input type="text" class="form-control pt-4 pb-4" id="nombre" disabled>
-                      </div>
-                      <div class="form-group grid-apellido flex-dato">
-                        <label class="label-dato" for="apellido">Apellido</label>
-                        <input type="text" class="form-control pt-4 pb-4" id="apellido" disabled>
-                      </div>
-                      <div class="form-group grid-dni flex-dato">
-                        <label class="label-dato" for="dni">DNI</label>
-                        <input type="text" class="form-control pt-4 pb-4" id="dni" disabled>
-                      </div>
-                      <div class="form-group grid-cargo flex-dato">
-                        <label class="label-dato" for="cargo">Cargo</label>
-                        <input type="text" class="form-control pt-4 pb-4" id="cargo" disabled>
-                      </div>
-                    </div>
-                    
-                    <!-- Sección registro de actividades -->
-                    <div class="card mb-3">
-                        <h2 class="titulo-card">Registro de actividades</h2>
-                        
-                        <div class="row">
-                          <div class="form-group col-md-6 pl-4 pr-4">
-                            <label for="entrada-fecha">Fecha :</label>
-                            <input type="text" class="form-control pt-4 pb-4" id="entrada-fecha" value="2024-07-09" disabled>
-                          </div>
-  
-                          <div class="form-group col-md-6 pl-4 pr-4">
-                            <label for="entrada-horario">Horario :</label>
-                            <input type="text" class="form-control pt-4 pb-4" id="horario" value="08:00 A 18:00" disabled>
-                          </div>
-                        </div>
-                        
-                        <div class="row p-2">
-                          <div class="col-6 col-md-3 col-lg-3 mb-4">
-                              <div class="card bg-primary text-white shadow">
-                                  <div class="card-body" id="btnIngresoLabores">
-                                      Ingreso labores
+                            <div class="card shadow mb-4 col-lg-12">
+                              <!-- <div class="card-header pt-2 pb-2"> -->
+                                  <h6 class="m-0 font-weight-bold text-primary mt-4">LISTADO DE PROGRAMACIÓN</h6>
+                              <!-- </div> -->
+                              <div class="card-body pl-0 pr-0">
+                                  <div  class="mt-2 mb-3" style="display: flex;justify-content: flex-end;">
+                                    <button type="submit" class="btn btn-danger pt-1 pb-1 pl-2 pr-2 text-uppercase">Imprimir</button>
+                                  </div>
+                                  <div class="table-responsive">
+                                      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                          <thead>
+                                              <tr>
+                                                  <th class="text-center">TURNO</th>
+                                                  <th class="text-center">COD.OPERARIO</th>
+                                                  <th class="text-center">COD.VEHÍCULO</th>
+                                                  <th class="text-center">LUNES</th>
+                                                  <th class="text-center">MARTES</th>
+                                                  <th class="text-center">MIERCOLES</th>
+                                                  <th class="text-center">JUEVES</th>
+                                                  <th class="text-center">VIERNES</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody>
+                                              <tr>
+                                                  <td>Mañana</td>
+                                                  <td>Operario02</td>
+                                                  <td>VEH03</td>
+                                                  <td class="text-center"><input type="checkbox" name="countries[]" value="Mal estado" autocomplete="off" disabled></td>
+                                                  <td class="text-center"><input type="checkbox" name="countries[]" value="Mal estado" autocomplete="off" disabled></td>
+                                                  <td class="text-center"><input type="checkbox" name="countries[]" value="Mal estado" autocomplete="off" disabled></td>
+                                                  <td class="text-center"><input type="checkbox" name="countries[]" value="Mal estado" autocomplete="off" disabled></td>
+                                                  <td class="text-center"><input type="checkbox" name="countries[]" value="Mal estado" autocomplete="off" disabled></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Tarde</td>
+                                                <td>Operario01</td>
+                                                <td>VEH02</td>
+                                                <td class="text-center"><input type="checkbox" name="countries[]" value="Mal estado" autocomplete="off" disabled></td>
+                                                <td class="text-center"><input type="checkbox" name="countries[]" value="Mal estado" autocomplete="off" disabled></td>
+                                                <td class="text-center"><input type="checkbox" name="countries[]" value="Mal estado" autocomplete="off" disabled></td>
+                                                <td class="text-center"><input type="checkbox" name="countries[]" value="Mal estado" autocomplete="off" disabled></td>
+                                                <td class="text-center"><input type="checkbox" name="countries[]" value="Mal estado" autocomplete="off" disabled></td>
+                                            </tr>
+                                            <tr>
+                                              <td>Noche</td>
+                                              <td>Operario02</td>
+                                              <td>VEH01</td>
+                                              <td class="text-center"><input type="checkbox" name="countries[]" value="Mal estado" autocomplete="off" disabled></td>
+                                              <td class="text-center"><input type="checkbox" name="countries[]" value="Mal estado" autocomplete="off" disabled></td>
+                                              <td class="text-center"><input type="checkbox" name="countries[]" value="Mal estado" autocomplete="off" disabled></td>
+                                              <td class="text-center"><input type="checkbox" name="countries[]" value="Mal estado" autocomplete="off" disabled></td>
+                                              <td class="text-center"><input type="checkbox" name="countries[]" value="Mal estado" autocomplete="off" disabled></td>
+                                          </tr>
+                                          </tbody>
+                                      </table>
                                   </div>
                               </div>
-                          </div>
-                          <div class="col-6 col-md-3 col-lg-3 mb-4">
-                              <div class="card bg-success text-white shadow">
-                                  <div class="card-body inactivo" id="btnIngresoRefrigerio">
-                                      Ingreso refrigerio
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-6 col-md-3 col-lg-3 mb-4">
-                              <div class="card bg-info text-white shadow">
-                                  <div class="card-body inactivo" id="btnSalidaRefrigerio">
-                                      Salida refrigerio
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-6 col-md-3 col-lg-3 mb-4">
-                              <div class="card bg-warning text-white shadow">
-                                  <div class="card-body inactivo" id="btnSalidaLabores">
-                                      Salida labores
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-    
-                    <!-- Hora y Fecha Actual -->
-                    <div class="card text-center p-4 mb-3 hora_fecha-grid">
-                      <div class="form-group"> 
-                        <time id="horaActual">12:51:00 Hrs.</time>
-                      </div>
-                      <div class="form-group">
-                        <time id="fechaActual">Miercoles, 10 de Junio de 2024</time>
-                      </div>
-                    </div>
-                    
-                    <div class="card mb-3 geolocalizacion-grid">
-                        <h2 class="titulo-card">Geolocalización de ingreso</h2>
-                        <div class="form-group">
-                            <label for="latitud">Latitud :</label>
-                            <input class="form-control dato-gps" id="latitud" disabled/>
-                        </div>
-                        <div class="form-group">
-                          <label for="longitud">Longitud :</label>
-                          <input class="form-control dato-gps" id="longitud" disabled/>
-                        </div>
-                         <div class="form-group">
-                            <label for="direccion">Dirección :</label>
-                            <textarea class="form-control" name="" id="direccion"></textarea>
-                            
-                        </div>
-                        <div id='mapa-container'>
-                          <div id="mapa"></div>
-                        </div>
-                      </div>
-                  </main>
+                            </div>
 
+                          </form>
+                        </div>
+                      </main>
                 </div>
                 <!-- /.container-fluid -->
-
             </div>
             <!-- End of Main Content -->
             <!-- Footer -->
-            <footer class="text-center">
+            <footer class="text-center p-4">
               <p>
                   Desarrollado por
                   <small rel="noopener noreferrer">
