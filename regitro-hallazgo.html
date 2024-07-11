@@ -346,7 +346,7 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                      <div class="p-3 mb-2 header text-uppercase text-center">
+                      <div class="mb-2 header text-uppercase text-center">
                         <h1>Módulo de registro de hallazgo</h1>
                       </div>                
                       <main class="contenedor">
@@ -355,33 +355,33 @@
                                 <p class="text-uppercase"><strong>Hallazgos del personal de acopio de carros eléctricos :</strong></p>
                             </div>
                             <div class="row">
-                              <div class="form-group col-sm-3 col-md-6">
-                                <label for="turnosalida">Turno :</label>
-                                <select id="inputState" class="form-control">
+                              <div class="form-group col-sm-3 col-md-6 col-lg-4">
+                                <label for="turnosalida" class="color-label">Turno :</label>
+                                <select id="inputState" class="form-control py-3 custom-auto-height">
                                     <option selected disabled>[ Seleccionar Turno ]</option>
                                     <option>06:00 A 14:00</option>
                                     <option>14:00 A 22:00</option>
                                     <option>22:00 A 06:00</option>
                                 </select>
                               </div>
-                              <div class="form-group col-sm-3 col-md-6">
-                                <label for="opsalida">Fecha :</label>
-                                <input type="date" class="form-control" id="exampleInputEmail1">
+                              <div class="form-group col-sm-3 col-md-6 col-lg-4">
+                                <label for="opsalida" class="color-label">Fecha :</label>
+                                <input type="date" class="form-control py-3 custom-auto-height" id="exampleInputEmail1">
                               </div>
                               
-                              <div class="form-group col-sm-3 col-md-6">
-                                <label for="opsalida">Hora :</label>
-                                <input type="time" class="form-control" id="exampleInputEmail1">
+                              <div class="form-group col-sm-3 col-md-6 col-lg-4">
+                                <label for="opsalida" class="color-label">Hora :</label>
+                                <input type="time" class="form-control py-3 custom-auto-height" id="exampleInputEmail1">
                               </div>
                               
-                              <div class="form-group col-sm-3 col-md-6">
-                                <label class="w-100" for="opsalida">Objeto hallado :</label>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-12">
+                                <label class="w-100 color-label" for="opsalida">Objeto hallado :</label>
                                 <textarea class="w-100" id="textarea" style="border: 1px solid rgb(196, 194, 194);border-radius: 5px; outline: none;"></textarea>
                               </div>
 
-                              <div class="form-group col-sm-3 col-md-6">
-                                <label for="turnoentrada">Operario :</label>
-                                <select id="inputState" class="form-control">
+                              <div class="form-group col-sm-3 col-md-6 col-lg-4">
+                                <label for="turnoentrada" class="color-label">Operario :</label>
+                                <select id="inputState" class="form-control py-3 custom-auto-height">
                                     <option selected>[ Seleccionar Operario ]</option>
                                     <option>Operario01</option>
                                     <option>Operario02</option>
@@ -389,9 +389,9 @@
                                 </select>
                               </div>
 
-                              <div class="form-group col-sm-3 col-md-6">
-                                <label for="opsalida">Sector :</label>
-                                <select id="inputState" class="form-control">
+                              <div class="form-group col-sm-3 col-md-6 col-lg-4">
+                                <label for="opsalida" class="color-label">Sector :</label>
+                                <select id="inputState" class="form-control py-3 custom-auto-height">
                                   <option selected>[ Seleccionar Sector ]</option>
                                   <option>Piso01</option>
                                   <option>Piso02</option>
@@ -399,29 +399,35 @@
                                 </select>
                               </div>
 
+                              <div class="form-group col-sm-3 col-md-6 col-lg-4">
+                                <label for="opsalida" class="color-label">Recibido por :</label>
+                                <input type="text" class="form-control py-3 custom-auto-height" id="exampleInputEmail1">
+                              </div>
+
                               <div class="form-group col-sm-3 col-md-6">
-                                <label class="w-100" for="opsalida">Lugar :</label>
+                                <label class="w-100 color-label" for="opsalida">Lugar :</label>
                                 <textarea class="w-100" id="textarea" style="border: 1px solid rgb(196, 194, 194);border-radius: 5px; outline: none;"></textarea>
                               </div>
 
                               <div class="form-group col-sm-3 col-md-6">
-                                <label for="opsalida">Recibido por :</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1">
-                              </div>
-
-                              <div class="form-group col-sm-3 col-md-6">
-                                <label for="opsalida">Firma digital (nombre completo y DNI) :</label>
+                                <label for="opsalida" class="color-label">Firma digital (nombre completo y DNI) :</label>
                                 <textarea class="w-100" id="textarea" style="border: 1px solid rgb(196, 194, 194);border-radius: 5px; outline: none;"></textarea>
                               </div>
 
-                              <div class="form-group col-sm-3 col-md-6">
-                                <label for="opsalida">Fotos de hallazgo :</label>
-                                <input type="file" class="form-control-file" id="exampleInputEmail1" accept="image/*">
+                              <div class="form-group col-md-6 col-lg-12 pl-3 pr-0">
+                                <label for="opsalida" class="color-label">Foto de hallazgo :</label>
+                              </div>
+                              <div class="profile-img">
+                                  <img src="./img/gpem.png" alt="" />
+                                  <div class="file btn btn-lg btn-primary">
+                                    Cargar
+                                    <input type="file" name="file" />
+                                  </div>
                               </div>
                             </div>
         
                             <div  class="mt-4">
-                                <button type="submit" class="btn btn-primary pt-2 pb-2 pl-4 pr-4 text-uppercase">Guardar</button>
+                                <button type="submit" class="btn btn-primary pt-3 pb-3 pl-4 pr-4 text-uppercase">Guardar</button>
                             </div>
                           </form>
                       </main>

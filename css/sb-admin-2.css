@@ -3546,6 +3546,7 @@ input[type="button"].btn-block {
   border-radius: 50%; 
   overflow: hidden; /* oculta todo el contenido fuera de la caja */
   position: relative;
+  margin-left: 15px;
 }
 
 .profile-img img {
@@ -3576,6 +3577,13 @@ input[type="button"].btn-block {
   left: 0;
   bottom: 0;
   cursor: pointer; /* manita de selección al hacer hover */
+}
+
+@media(min-width:768px){
+  .btn-modificado{
+    display: flex;
+    align-items: flex-end;
+  } 
 }
 
 .input-group > .input-group-prepend > .btn,
@@ -10565,7 +10573,7 @@ a:focus {
 
 @media (min-width: 768px) {
   .sidebar {
-    width: 14rem !important;
+    width: 22rem !important;
   }
   .sidebar .nav-item .collapse {
     position: relative;
