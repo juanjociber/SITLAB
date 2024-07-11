@@ -233,6 +233,13 @@ iframe{
 }
 
 
+@media(min-width:1200px){
+    .contenedor{
+        width: min(70%, 120rem);
+        margin: 1rem auto;
+    }
+}
+
 /* 
 .fijo{
     position: fixed;
