@@ -60,7 +60,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav nav-modificado sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
@@ -173,7 +173,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" style="background-color: #0061f2 !important;background-image: linear-gradient(92deg, #0061f2 0%, rgba(105, 0, 199, .8) 100%) !important;">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow nav-modificado">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -536,9 +536,72 @@
                             <input type="text" class="form-control py-3 custom-auto-height" id="exampleInputEmail1" disabled>
                           </div>
   
-                          <div class="form-group col-md-6 col-lg-12 mb-5">
-                            <small class="d-block mt-2 mb-2 text-uppercase">Relación de  carritos eléctricos operativos y en mantenimiento</small>
+                          <form class="col-lg-12 mb-4">
+                            <div class="form-group col-md-6 col-lg-12 mb-3 pl-0">
+                              <small class="d-block mt-2 mb-2 text-uppercase">Relación de carritos eléctricos operativos y en mantenimiento</small>
+                            </div>
+                            <div class="row">
+                              <div class="form-group col-sm-3 col-md-6 col-lg-4">
+                                <label for="opsalida" class="color-label">Fecha inicial :</label>
+                                <input type="date" class="form-control py-3 custom-auto-height" id="exampleInputEmail1">
+                              </div>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-4">
+                                <label for="opsalida" class="color-label">Fecha final :</label>
+                                <input type="date" class="form-control py-3 custom-auto-height" id="exampleInputEmail1">
+                              </div>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-4">
+                                <label for="turnoentrada" class="color-label">Codigo carrito :</label>
+                                <select id="inputState" class="form-control py-3 custom-auto-height">
+                                    <option selected>[ Seleccionar carrito ]</option>
+                                    <option>Carrito01</option>
+                                    <option>Carrito02</option>
+                                    <option>Carrito03</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div  class="form-group mt-2 mb-4 mb-md-3 col-md-6 btn-modificado pl-0 pr-0 mt-4" >
+                              <button type="submit" class="btn btn-primary pt-3 pb-3 pl-4 pr-4 text-uppercase">Consultar</button>
+                            </div>
+
+                            <div class="card shadow mb-4 col-lg-12">
+                              <!-- <div class="card-header pt-2 pb-2"> -->
+                                  <h6 class="m-0 font-weight-bold text-primary mt-4">LISTA DE CARRITOS OPERAIVOS Y MANTENIMIENTO</h6>
+                              <!-- </div> -->
+                              <div class="card-body pl-0 pr-0">
+                                  <div class="table-responsive">
+                                      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                          <thead>
+                                              <tr>
+                                                  <th class="text-center">CODIGO</th>
+                                                  <th class="text-center">MARCA</th>
+                                                  <th class="text-center">MODELO</th>
+                                                  <th class="text-center">AÑO</th>
+                                                  <th class="text-center">ESTADO DEL EQUIPO</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody>
+                                              <tr>
+                                                  <td>CARRRITO01</td>
+                                                  <td>MARCA01</td>
+                                                  <td>MODELOO1</td>
+                                                  <td>2020</td>
+                                                  <td>BUENO</td>
+                                              </tr>
+                                              <tr>
+                                                <td>CARRITO02</td>
+                                                <td>MARCA02</td>
+                                                <td>MODELOO2</td>
+                                                <td>2021</td>
+                                                <td>BUENO</td>
+                                            </tr>
+                                          </tbody>
+                                      </table>
+                                  </div>
+                              </div>
                           </div>
+                          </form>
+
+
   
                           <div class="form-group col-sm-3 col-md-6 col-lg-12">
                             <label for="opsalida" class="color-label">Mantenimiento preventivo y correctivo</label>
@@ -550,10 +613,74 @@
                           </div>
   
                           <div class="form-group col-md-6 col-lg-12 mb-5">
-                            <small class="d-block mt-2 mb-2 text-uppercase">relación del personal sancionado</small>
+                            <small class="d-block mt-2 mb-2 text-uppercase"></small>
                           </div>
-  
-  
+
+                          <form class="col-lg-12 mb-4">
+                            <div class="form-group col-md-6 col-lg-12 mb-3 pl-0">
+                              <small class="d-block mt-2 mb-2 text-uppercase">Relación del personal sancionado</small>
+                            </div>
+                            <div class="row">
+                              <div class="form-group col-sm-3 col-md-6 col-lg-4">
+                                <label for="opsalida" class="color-label">Fecha inicial :</label>
+                                <input type="date" class="form-control py-3 custom-auto-height" id="exampleInputEmail1">
+                              </div>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-4">
+                                <label for="opsalida" class="color-label">Fecha final :</label>
+                                <input type="date" class="form-control py-3 custom-auto-height" id="exampleInputEmail1">
+                              </div>
+                              <div class="form-group col-sm-3 col-md-6 col-lg-4">
+                                <label for="turnoentrada" class="color-label">Nombre y apellido :</label>
+                                <select id="inputState" class="form-control py-3 custom-auto-height">
+                                    <option selected>[ Seleccionar colaborador ]</option>
+                                    <option>Colaborador01</option>
+                                    <option>Colaborador02</option>
+                                    <option>Colaborador03</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div  class="form-group mt-2 mb-4 mb-md-3 col-md-6 btn-modificado pl-0 pr-0 mt-4" >
+                              <button type="submit" class="btn btn-primary pt-3 pb-3 pl-4 pr-4 text-uppercase">Consultar</button>
+                            </div>
+
+                            <div class="card shadow mb-4 col-lg-12">
+                              <!-- <div class="card-header pt-2 pb-2"> -->
+                                  <h6 class="m-0 font-weight-bold text-primary mt-4">LISTA DE AMONESTACIONES DEL COLABORADOR</h6>
+                              <!-- </div> -->
+                              <div class="card-body pl-0 pr-0">
+                                  <div class="table-responsive">
+                                      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                          <thead>
+                                              <tr>
+                                                  <th class="text-center">CODIGO</th>
+                                                  <th class="text-center">NOMBRE Y APELLIDOS</th>
+                                                  <th class="text-center">SUCESO</th>
+                                                  <th class="text-center">JUSTIFICACIÓN</th>
+                                                  <th class="text-center">SOLUCIÓN</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody>
+                                              <tr>
+                                                  <td>001</td>
+                                                  <td>COLABORADOR01</td>
+                                                  <td>SUCESO1</td>
+                                                  <td>JUSTIFICACIÓN1</td>
+                                                  <td>SOLUCIÓN1</td>
+                                              </tr>
+                                              <tr>
+                                                <td>002</td>
+                                                <td>COLABORADOR02</td>
+                                                <td>SUCESO2</td>
+                                                <td>JUSTIFICACIÓN2</td>
+                                                <td>SOLUCIÓN2</td>
+                                            </tr>
+                                          </tbody>
+                                      </table>
+                                  </div>
+                              </div>
+                          </div>
+                          </form>
+
                           <div class="form-group col-md-6 col-lg-12">
                             <small class="d-block mt-2 mb-2 text-uppercase">Documento laborales</small>
                           </div>

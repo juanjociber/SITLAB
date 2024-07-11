@@ -371,7 +371,7 @@ h1, .h1 {
   font-weight: 700;
 }
 h1{
-  color: #0061f2 !important;
+  color: #13316C  !important;
 }
 
 h2, .h2 {
@@ -3536,7 +3536,7 @@ input[type="button"].btn-block {
 }
 /*ESTILOS LABEL*/
 .color-label{
-  color: #505cfd;
+  color: #13316C;
 }
 
 /*ESTILOS CARGA DE IMAGEN*/
@@ -4582,6 +4582,11 @@ input[type="button"].btn-block {
 .card > .card-header + .list-group,
 .card > .list-group + .card-footer {
   border-top: 0;
+}
+
+.nav-modificado{
+  background-color: #13316C !important;
+  background-image: linear-gradient(92deg, #13316C 0%, #13316C 100%) !important;
 }
 
 .card-body {
