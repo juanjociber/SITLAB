@@ -18,8 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/control-asistencia.css">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
     <style>
         body{
             font-family: 'Roboto',sans-serif;
@@ -348,7 +347,7 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                  <div class="p-3 mb-2 header text-uppercase text-center">
+                  <div class=" mb-2 header text-uppercase text-center">
                     <h1>Módulo de control de activos durante el cambio de turno (CHECKLIST)</h1>
                   </div>
               
@@ -360,8 +359,8 @@
                         </div>
                         <div class="row">
                           <div class="form-group col-sm-3 col-md-6">
-                            <label for="opsalida">Operario de Salida :</label>
-                            <select id="inputState" class="form-control">
+                            <label for="opsalida" class="color-label">Operario de Salida :</label>
+                            <select id="inputState" class="form-control py-3 custom-auto-height">
                                 <option selected>[ Seleccionar Operario ]</option>
                                 <option>Operario_01</option>
                                 <option>Operario_02</option>
@@ -369,8 +368,8 @@
                             </select>
                           </div>
                           <div class="form-group col-sm-3 col-md-6">
-                            <label for="turnosalida">Turno :</label>
-                            <select id="inputState" class="form-control">
+                            <label for="turnosalida" class="color-label">Turno :</label>
+                            <select id="inputState" class="form-control py-3 custom-auto-height">
                                 <option selected disabled>[ Seleccionar Turno ]</option>
                                 <option>06:00 A 14:00</option>
                                 <option>14:00 A 22:00</option>
@@ -378,8 +377,8 @@
                             </select>
                           </div>
                           <div class="form-group col-sm-3 col-md-6">
-                            <label for="opentrada">Operario de Entrada :</label>
-                            <select id="inputState" class="form-control">
+                            <label for="opentrada" class="color-label">Operario de Entrada :</label>
+                            <select id="inputState" class="form-control py-3 custom-auto-height">
                                 <option selected disabled>[ Seleccionar Operario ]</option>
                                 <option>Operario_04</option>
                                 <option>Operario_05</option>
@@ -387,8 +386,8 @@
                             </select>
                           </div>
                           <div class="form-group col-sm-3 col-md-6">
-                            <label for="turnoentrada">Turno :</label>
-                            <select id="inputState" class="form-control">
+                            <label for="turnoentrada" class="color-label">Turno :</label>
+                            <select id="inputState" class="form-control py-3 custom-auto-height">
                                 <option selected>[ Seleccionar Turno ]</option>
                                 <option>06:00 A 14:00</option>
                                 <option>14:00 A 22:00</option>
@@ -403,180 +402,191 @@
 
                         <div class="row">
                             <div class="form-group col-sm-3 col-md-6">
-                                <label for="opsalida">Carga de batería</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="ingresar carga">
+                                <label for="opsalida" class="color-label">Carga de batería</label>
+                                <input type="text" class="form-control py-3 custom-auto-height" id="exampleInputEmail1" placeholder="ingresar carga">
                             </div>
                             <div class="form-group col-sm-3 col-md-6">
-                                <label for="opsalida">Recorrido del carro eléctrico (KM.)</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="ingresar recorrido">
+                                <label for="opsalida" class="color-label">Recorrido del carro eléctrico (KM.)</label>
+                                <input type="text" class="form-control py-3 custom-auto-height" id="exampleInputEmail1" placeholder="ingresar recorrido">
                             </div>
 
                             <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100" for="turnosalida">Limpieza y desinfección de asientos (6) :</label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="w-100 color-label" for="turnosalida">Limpieza y desinfección de asientos (6) :</label>
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Realizado" autocomplete="off"> Realizado
                                 </label>
-                                <label class="btn btn-outline-primary mr-2">
-                                    <input type="radio" name="countries[]" value="Sin realizar" autocomplete="off"> Sin realizar
-                                </label>
-                            </div>
-                            <div class="form-group col-sm-3 col-md-12 col-lg-6"">
-                                <label class="w-100" for="turnosalida">Limpieza de carrocería exterior delantero y posterior :</label>
-                                <label class="btn btn-outline-primary mr-2">
-                                    <input type="radio" name="countries[]" value="Realizado" autocomplete="off"> Realizado
-                                </label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Sin realizar" autocomplete="off"> Sin realizar
                                 </label>
                             </div>
                             <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100" for="turnosalida">Limpieza de pisos y ruedas :</label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="w-100 color-label" for="turnosalida">Limpieza de carrocería exterior delantero y posterior :</label>
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Realizado" autocomplete="off"> Realizado
                                 </label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Sin realizar" autocomplete="off"> Sin realizar
                                 </label>
                             </div>
                             <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100" for="opentrada">Inspección y limpieza de neumáticos (4) :</label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="w-100 color-label" for="turnosalida">Limpieza de pisos y ruedas :</label>
+                                <label class="btn btn-outline-secondary mr-2">
+                                    <input type="radio" name="countries[]" value="Realizado" autocomplete="off"> Realizado
+                                </label>
+                                <label class="btn btn-outline-secondary mr-2">
+                                    <input type="radio" name="countries[]" value="Sin realizar" autocomplete="off"> Sin realizar
+                                </label>
+                            </div>
+                            <div class="form-group col-sm-3 col-md-12 col-lg-6">
+                                <label class="w-100 color-label for="opentrada">Inspección y limpieza de neumáticos (4) :</label>
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
                                 </label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
                                 </label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
                                 </label>
                             </div>
 
                             <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100" for="opentrada">Inspección de funcionamiento (luces frontales y posteriores) :</label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="w-100 color-label" for="opentrada">Inspección de funcionamiento (luces frontales y posteriores) :</label>
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
                                 </label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
                                 </label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
                                 </label>
                             </div>
                             <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100" for="opentrada">Inspección de funcionamiento de pedales de freno :</label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="w-100 color-label" for="opentrada">Inspección de funcionamiento de pedales de freno :</label>
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
                                 </label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
                                 </label>
-                                <label class="btn btn-outline-primary mr-2">
-                                    <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
-                                </label>
-                            </div>
-                            <div class="form-group col-sm-3 col-md-12 col-lg-6
-                            ">
-                                <label class="w-100" for="opentrada">Inspección de correas de seguridad :</label>
-                                <label class="btn btn-outline-primary mr-2">
-                                    <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
-                                </label>
-                                <label class="btn btn-outline-primary mr-2">
-                                    <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
-                                </label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
                                 </label>
                             </div>
                             <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100" for="opentrada">Inspección conectores eléctricos de motor :</label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="w-100 color-label" for="opentrada">Inspección de correas de seguridad :</label>
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
                                 </label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
                                 </label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
                                 </label>
                             </div>
                             <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100" for="opentrada">Inspección de funcionamiento del tablero de instrumeto :</label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="w-100 color-label for="opentrada">Inspección conectores eléctricos de motor :</label>
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
                                 </label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
                                 </label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
                                 </label>
                             </div>
                             <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100" for="opentrada">Inspección y funcionamiento del tablero de instrumento :</label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="w-100 color-label" for="opentrada">Inspección de funcionamiento del tablero de instrumeto :</label>
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
                                 </label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
                                 </label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
                                 </label>
                             </div>
                             <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100" for="opentrada">Funcionamiento de pedal de aceleración :</label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="w-100 color-label for="opentrada">Inspección y funcionamiento del tablero de instrumento :</label>
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
                                 </label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
                                 </label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
                                 </label>
                             </div>
                             <div class="form-group col-sm-3 col-md-12 col-lg-6">
-                                <label class="w-100" for="opentrada">Inspección de funcionamiento de freno de servicio y estacionamiento :</label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="w-100 color-label for="opentrada">Funcionamiento de pedal de aceleración :</label>
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
                                 </label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
                                 </label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
+                                    <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
+                                </label>
+                            </div>
+                            <div class="form-group col-sm-3 col-md-12 col-lg-6">
+                                <label class="w-100 color-label" for="opentrada">Inspección de funcionamiento de freno de servicio y estacionamiento :</label>
+                                <label class="btn btn-outline-secondary mr-2">
+                                    <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
+                                </label>
+                                <label class="btn btn-outline-secondary mr-2">
+                                    <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
+                                </label>
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
                                 </label>
                             </div>
                             <div class="form-group col-sm-3 col-md-12 col-lg-12">
-                                <label class="w-100" for="opentrada">Inspección de funcionamiento de freno eléctrico :</label>
+                                <label class="w-100 color-label" for="opentrada">Inspección de funcionamiento de freno eléctrico :</label>
                                 <!-- <div class="btn-group btn-group-toggle" data-toggle="buttons"> -->
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Bueno" autocomplete="off"> Bueno
                                 </label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="Mal estado" autocomplete="off"> Mal estado
                                 </label>
-                                <label class="btn btn-outline-primary mr-2">
+                                <label class="btn btn-outline-secondary mr-2">
                                     <input type="radio" name="countries[]" value="No tiene" autocomplete="off"> No tiene
                                 </label>
                                 <!-- </div> -->
                             </div>
                             <div class="form-group col-sm-3 col-md-6">
-                                <label class="w-100" for="opsalida">Daños o desperfectos :</label>
-                                <textarea class="w-100" id="textarea" style="border: 1px solid rgb(196, 194, 194);border-radius: 5px; outline: none;"></textarea>
+                                <label class="w-100 color-label" for="opsalida">Daños o desperfectos :</label>
+                                <textarea class="w-100 py-3 custom-auto-height" id="textarea" style="border: 1px solid rgb(196, 194, 194);border-radius: 5px; outline: none;"></textarea>
                             </div>
                             <div class="form-group col-sm-3 col-md-6">
-                                <label for="opsalida">Número de hallazgos :</label>
-                                <input type="number" class="form-control" id="exampleInputEmail1" placeholder="ingresar número de hallazgo">
+                                <label for="opsalida" class="color-label">Número de hallazgos :</label>
+                                <input type="number" class="form-control py-3 custom-auto-height" id="exampleInputEmail1" placeholder="ingresar número de hallazgo">
                             </div>
                             <div class="form-group col-sm-3 col-md-6">
-                                <label for="opsalida">Número de incidencias :</label>
-                                <input type="number" class="form-control" id="exampleInputEmail1" placeholder="ingresar número de incidencias">
+                                <label for="opsalida" class="color-label">Número de incidencias :</label>
+                                <input type="number" class="form-control py-3 custom-auto-height" id="exampleInputEmail1" placeholder="ingresar número de incidencias">
                             </div>
+                            <!-- <div class="form-group col-sm-3 col-md-6">
+                                <label for="opsalida" class="color-label">Cargar evidencia 1 (foto) :</label>
+                                <input type="file" class="form-control-file py-3 custom-auto-height" id="exampleInputEmail1" accept="image/*">
+                            </div> -->
+
                             <div class="form-group col-sm-3 col-md-6">
-                                <label for="opsalida">Cargar evidencia 1 (foto) :</label>
-                                <input type="file" class="class="form-control-file" id="exampleInputEmail1" accept="image/*">
+                                <label for="opsalida" class="color-label">Cargar evidencia :</label>
+                            </div>
+
+                            <div class="profile-img">
+                                <img src="./img/gpem.png" alt="" />
+                                <div class="file btn btn-lg btn-primary">
+                                  Subir Foto
+                                  <input type="file" name="file" />
+                                </div>
                             </div>
                         </div>
 

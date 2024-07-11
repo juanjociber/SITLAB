@@ -5,12 +5,12 @@
     list-style-type:none;
 } */
 
-body{
+/* body{
     font-family: 'Roboto',sans-serif;
     font-size: 17px;
-}
+} */
 h1{
-    font-size: 1.28em;
+    font-size: 1em;
     margin: 0;
     font-weight: bold;
 }
@@ -235,7 +235,7 @@ iframe{
 
 @media(min-width:1200px){
     .contenedor{
-        width: min(70%, 120rem);
+        width: min(80%, 120rem);
         margin: 1rem auto;
     }
 }
