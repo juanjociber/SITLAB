@@ -80,6 +80,14 @@
                 <span>Control de activo</span></a>
             </li>
 
+            
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="control-disponibilidad.html">
+                  <i class="bi bi-controller"></i>
+                  <span>Disponibilidad de flota</span></a>
+              </li>
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
               <a class="nav-link" href="regitro-hallazgo.html">
@@ -360,133 +368,129 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
                   <div class="mb-2 header text-uppercase text-center">
-                    <h1>Módulo de Control de Asistencias</h1>
+                    <h1>Control de Asistencias</h1>
                   </div>
-              
-                  <div id='mostrar'></div>
 
-                  <main class="contenedor grid-lg">
-
-                    <div class="card mb-3 grid-2 dni-grid">
-                      <h2 class="titulo-card">Documento de identidad</h2>
+                  <!-- <div class="grid-asistencia"> -->
+                    <div class="row card mb-3">
+                      <h2 class="col-sm-12 titulo-card">Documento de identidad</h2>
                       <div class="form-group">
-                        <label for="nroDni">Nro. DNI</label>
-                        <input type="tel" class="form-control pt-4 pb-4" id="nroDni">
+                          <label for="nroDni">Nro. DNI</label>
+                          <input type="tel" class="form-control pt-4 pb-4" id="nroDni">
                       </div>
-                      <div class="form-group text-center">
-                        <button type="button" class="btn btn-primary text-uppercase p-3 m-3" id="btnAsistencia">Asistencia</button>
-                        <button type="button" class="btn btn-danger text-uppercase p-3" id="btnRefrigerio">Refrigerio</button>
+                      <div class="row d-flex justify-content-center">
+                        <div class="form-group col-md-4">
+                            <button type="button" class="btn bg-primary text-white text-uppercase p-3 col-sm-12" id="btnAsistencia">Asistencia</button>
+                        </div>
+                        <div class="form-group col-md-4">
+                          <button type="button" class="btn bg-danger text-white text-uppercase  p-3 col-sm-12" id="btnRefrigerio">Refrigerio</button>
+                        </div>
                       </div>
                     </div>
-                    
-                    <div class="card mb-3 grid-2 informacion-grid">
-                      <h2 class="titulo-card">Información del usuario</h2>               
+
+                    <div class="row card mb-3 informacion-grid">
+                      <h2 class="col-sm-12 titulo-card">Información del usuario</h2>               
                       <div class="contenedor-foto grid-foto">
-                        <img src="img/foto.png" alt="Foto del usuario">
+                          <img src="img/foto.png" alt="Foto del usuario">
                       </div>
                       <div class="form-group grid-codigo flex-dato">
-                        <label class="label-dato" for="codigo">Código</label>
-                        <input type="text" class="form-control pt-4 pb-4" id="codigo" disabled>
+                          <label class="label-dato" for="codigo">Código</label>
+                          <input type="text" class="form-control pt-4 pb-4" id="codigo" disabled>
                       </div>
                       <div class="form-group grid-nombre flex-dato">
-                        <label class="label-dato" for="nombre">Nombres</label>
-                        <input type="text" class="form-control pt-4 pb-4" id="nombre" disabled>
+                          <label class="label-dato" for="nombre">Nombres</label>
+                          <input type="text" class="form-control pt-4 pb-4" id="nombre" disabled>
                       </div>
                       <div class="form-group grid-apellido flex-dato">
-                        <label class="label-dato" for="apellido">Apellido</label>
-                        <input type="text" class="form-control pt-4 pb-4" id="apellido" disabled>
+                          <label class="label-dato" for="apellido">Apellido</label>
+                          <input type="text" class="form-control pt-4 pb-4" id="apellido" disabled>
                       </div>
                       <div class="form-group grid-dni flex-dato">
-                        <label class="label-dato" for="dni">DNI</label>
-                        <input type="text" class="form-control pt-4 pb-4" id="dni" disabled>
+                          <label class="label-dato" for="dni">DNI</label>
+                          <input type="text" class="form-control pt-4 pb-4" id="dni" disabled>
                       </div>
                       <div class="form-group grid-cargo flex-dato">
-                        <label class="label-dato" for="cargo">Cargo</label>
-                        <input type="text" class="form-control pt-4 pb-4" id="cargo" disabled>
+                          <label class="label-dato" for="cargo">Cargo</label>
+                          <input type="text" class="form-control pt-4 pb-4" id="cargo" disabled>
                       </div>
                     </div>
                     
                     <!-- Sección registro de actividades -->
-                    <div class="card mb-3">
-                        <h2 class="titulo-card">Registro de actividades</h2>
-                        
-                        <div class="row">
-                          <div class="form-group col-md-6 pl-4 pr-4">
-                            <label for="entrada-fecha">Fecha :</label>
-                            <input type="text" class="form-control pt-4 pb-4" id="entrada-fecha" value="2024-07-09" disabled>
-                          </div>
-  
-                          <div class="form-group col-md-6 pl-4 pr-4">
-                            <label for="entrada-horario">Horario :</label>
-                            <input type="text" class="form-control pt-4 pb-4" id="horario" value="08:00 A 18:00" disabled>
+                    <div class="row card mb-3 card-grid">
+                      <h2 class="col-sm-12 titulo-card">Registro de actividades</h2>
+                      <div class="row d-flex justify-content-between">
+                        <div class="form-group col-md-5 ml-2">
+                          <label for="entrada-fecha">Fecha :</label>
+                          <input type="text" class="form-control pt-4 pb-4" id="entrada-fecha" value="2024-07-09" disabled>
+                        </div>
+                        <div class="form-group col-md-5 mr-2">
+                          <label for="entrada-horario">Horario :</label>
+                          <input type="text" class="form-control pt-4 pb-4" id="horario" value="08:00 A 18:00" disabled>
+                        </div>
+                      </div>
+                      <div class="row m-0 justify-content-center">
+                        <div class="col-sm-12 col-md-5 col-lg-3 mb-4">
+                          <div class="card bg-primary text-white shadow">
+                            <div class="card-body" id="btnIngresoLabores">
+                              Ingreso labores
+                            </div>
                           </div>
                         </div>
-                        
-                        <div class="row p-2">
-                          <div class="col-6 col-md-3 col-lg-3 mb-4">
-                              <div class="card bg-primary text-white shadow">
-                                  <div class="card-body" id="btnIngresoLabores">
-                                      Ingreso labores
-                                  </div>
-                              </div>
+                        <div class="col-sm-12 col-md-5 col-lg-3 mb-4">
+                          <div class="card bg-success text-white shadow">
+                            <div class="card-body inactivo" id="btnIngresoRefrigerio">
+                              Ingreso refrigerio
+                            </div>
                           </div>
-                          <div class="col-6 col-md-3 col-lg-3 mb-4">
-                              <div class="card bg-success text-white shadow">
-                                  <div class="card-body inactivo" id="btnIngresoRefrigerio">
-                                      Ingreso refrigerio
-                                  </div>
-                              </div>
+                        </div>
+                        <div class="col-sm-12 col-md-5 col-lg-3 mb-4">
+                          <div class="card bg-info text-white shadow">
+                            <div class="card-body inactivo" id="btnSalidaRefrigerio">
+                              Salida refrigerio
+                            </div>
                           </div>
-                          <div class="col-6 col-md-3 col-lg-3 mb-4">
-                              <div class="card bg-info text-white shadow">
-                                  <div class="card-body inactivo" id="btnSalidaRefrigerio">
-                                      Salida refrigerio
-                                  </div>
-                              </div>
+                        </div>
+                        <div class="col-sm-12 col-md-5 col-lg-3 mb-4">
+                          <div class="card bg-warning text-white shadow">
+                            <div class="card-body inactivo" id="btnSalidaLabores">
+                              Salida labores
+                            </div>
                           </div>
-                          <div class="col-6 col-md-3 col-lg-3 mb-4">
-                              <div class="card bg-warning text-white shadow">
-                                  <div class="card-body inactivo" id="btnSalidaLabores">
-                                      Salida labores
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-    
-                    <!-- Hora y Fecha Actual -->
-                    <div class="card text-center p-4 mb-3 hora_fecha-grid">
-                      <div class="form-group"> 
-                        <time id="horaActual">12:51:00 Hrs.</time>
-                      </div>
-                      <div class="form-group">
-                        <time id="fechaActual">Miercoles, 10 de Junio de 2024</time>
+                        </div>
                       </div>
                     </div>
                     
-                    <div class="card mb-3 geolocalizacion-grid">
-                        <h2 class="titulo-card">Geolocalización de ingreso</h2>
-                        <div class="form-group">
-                            <label for="latitud">Latitud :</label>
-                            <input class="form-control dato-gps" id="latitud" disabled/>
-                        </div>
-                        <div class="form-group">
-                          <label for="longitud">Longitud :</label>
-                          <input class="form-control dato-gps" id="longitud" disabled/>
-                        </div>
-                         <div class="form-group">
-                            <label for="direccion">Dirección :</label>
-                            <textarea class="form-control" name="" id="direccion"></textarea>
-                            
-                        </div>
-                        <div id='mapa-container'>
-                          <div id="mapa"></div>
-                        </div>
+                    <!-- Hora y Fecha Actual -->
+                    <div class=" row card card-grid text-center p-4 mb-3 hora_fecha-grid">
+                      <div class="form-group col-sm-12"> 
+                        <time id="horaActual">12:51:00 Hrs.</time>
                       </div>
-                  </main>
+                      <div class="form-group col-sm-12">
+                        <time id="fechaActual">Miercoles, 10 de Junio de 2024</time>
+                      </div>
+                    </div>
 
+                    <!-- Geolocalización -->
+                    <div class="row card mb-3 geolocalizacion-grid">
+                      <h2 class="titulo-card">Geolocalización de ingreso</h2>
+                      <div class="form-group">
+                          <label for="latitud">Latitud :</label>
+                          <input class="form-control dato-gps" id="latitud" disabled/>
+                      </div>
+                      <div class="form-group">
+                        <label for="longitud">Longitud :</label>
+                        <input class="form-control dato-gps" id="longitud" disabled/>
+                      </div>
+                        <div class="form-group">
+                          <label for="direccion">Dirección :</label>
+                          <textarea class="form-control" name="" id="direccion"></textarea>
+                      </div>
+                      <div id='mapa-container'>
+                        <div id="mapa"></div>
+                      </div>
+                    </div>
+                  <!-- </div> -->
                 </div>
                 <!-- /.container-fluid -->
 

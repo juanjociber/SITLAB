@@ -4591,15 +4591,15 @@ input[type="button"].btn-block {
   /* background-image: linear-gradient(92deg, #13316C 0%, #13316C 100%) !important; */
 }
 .btn-buscar-modificado{
-  background-color: #f6c23e;
-  border: 1px solid #f6c23e;
+  background-color: #efab00;
+  border: 1px solid #efab00;
 }
 .btn-buscar-modificado:hover{
   background-color: #deae35 !important;
   border: 1px solid #deae35 !important;
 }
 .color-modificado{
-  color: #f6c23e !important;
+  color: #efab00 !important;
   text-shadow: 2px 1px 5px #3e3c3c;
 }
 .bi{
