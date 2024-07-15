@@ -49,6 +49,7 @@
 
 html {
   line-height: 1.15;
+  font-size: 17px;
   /* font-size: 62.5%; */
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -61,7 +62,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 body {
   margin: 0;
   font-family: 'Roboto',sans-serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #858796;
@@ -4585,8 +4586,24 @@ input[type="button"].btn-block {
 }
 
 .nav-modificado{
-  background-color: #13316C !important;
-  background-image: linear-gradient(92deg, #13316C 0%, #13316C 100%) !important;
+  /* background-color: #13316C !important; */
+  background-color: #0e3e9f !important;
+  /* background-image: linear-gradient(92deg, #13316C 0%, #13316C 100%) !important; */
+}
+.btn-buscar-modificado{
+  background-color: #f6c23e;
+  border: 1px solid #f6c23e;
+}
+.btn-buscar-modificado:hover{
+  background-color: #deae35 !important;
+  border: 1px solid #deae35 !important;
+}
+.color-modificado{
+  color: #f6c23e !important;
+  text-shadow: 2px 1px 5px #3e3c3c;
+}
+.bi{
+  font-size: 1.2rem !important;
 }
 
 .card-body {
