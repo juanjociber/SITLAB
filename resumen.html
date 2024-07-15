@@ -371,147 +371,139 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
+                    <div class="container section-top">
 
-                    <div class="p-3 mb-2 header text-uppercase text-center">
-                        <h1>Programación de mantenimiento</h1>
-                    </div>
-
-                    <!-- ENLACES -->
-                    <div class="row">
-                        <div class="col-12">
-                            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-                                <ol class="breadcrumb">                        
-                                    <li class="breadcrumb-item active fw-bold" aria-current="page">EMPRESAS</li>
-                                    <li class="breadcrumb-item fw-bold"><a href="/ordenes.html" class="text-decoration-none">ORDENES</a></li>
-                                </ol>
-                            </nav>
+                        <div class="row mb-3 gpem-hide-print">
+                            <div class="col-12 btn-group" role="group" aria-label="Basic example">
+                                <a href="ordenes.html" class="btn btn-outline-primary fw-bold"><i class="fas fa-list"></i><span class="d-none d-sm-block"> Ordenes</span></a>
+                                <a href="editar.html" type="button" class="btn btn-outline-primary fw-bold"><i class="fas fa-edit"></i><span class="d-none d-sm-block"> Editar</span></a>
+                                <a type="button" class="btn btn-outline-primary fw-bold"><i class="fas fa-check-square"></i><span class="d-none d-sm-block"> Finalizar</span></a>
+                            </div>
                         </div>
-                    </div>
-            
-                    <div class="container section-top">        
-                        <div class="row p-1">
-                            <div class="col-12 border-bottom fw-bold m-0 fs-4">EMPRESA02<span class="text-secondary" style="font-style: italic; font-size: 12px;"> Predeterminado</span></div>
+                
+                        <div class="row border-bottom mb-2 fs-5">
+                            <div class="col-12 fw-bold d-flex justify-content-between">
+                                <p class="m-0 p-0">EMPRESA01</p>
+                                <input type="text" class="d-none" id="txtId" value="406172">
+                                <p class="m-0 p-0 text-center text-secondary">OT 377791</p>
+                            </div>
                         </div>
-                        <div class="row p-2 position-relative" style="z-index:0;">
-                            
-                            <div class="col-12 divselect border-bottom border-secondary mb-1 p-1">
-                                <a class="link-colecciones" style="text-decoration: none;" href="#" onclick="FnModalCambiarEmpresa(5,'INDUSTRIAS DEL ESPINO S.A.'); return false;">
-                                    <div class="row position-relative" style="color: rgb(108, 108, 106);">
-                                        <div class="container-wa text-end pe-3 text-primary">
-                                            <input class="form-check-input" style="z-index: 1;" type="radio" name="radio" id="radio1" data-bs-toggle="modal" data-bs-target="#exampleModal">    
-                                            </div>
-                                        <div class="col-12">
-                                            <p class="m-0 text-secondary" style="font-size:13px;">20000000002</p>
-                                            <p class="m-0">EMPRESA01</p>
-                                        </div>
-                                    </div>
-                                </a>
+                
+                        <div class="row p-1 mb-0">
+                            <div class="col-12 mb-0 border-bottom bg-light">
+                                <p class="m-0 fw-bold">Órden</p>
                             </div>
-                            <div class="col-12 divselect border-bottom border-secondary mb-1 p-1">
-                                <a class="link-colecciones" style="text-decoration: none;" href="#" onclick="FnModalCambiarEmpresa(10,'REALIDAD EXPRESS'); return false;">
-                                    <div class="row position-relative"style="color: rgb(108, 108, 106);">
-                                        <div class="container-wa text-end pe-3 text-primary">
-                                            <input class="form-check-input" type="radio" name="radio" id="radio1"> 
-                                            <input class="form-check-input" style="z-index: 1;" type="radio" name="radio" id="radio1" data-bs-toggle="modal" data-bs-target="#exampleModal">    
-                                            </div>
-                                        <div class="col-12">
-                                            <p class="m-0 text-secondary" style="font-size:13px;">20000000003</p>
-                                            <p class="m-0">EMPRESA02</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 divselect border-bottom border-secondary mb-1 p-1">
-                                <a class="link-colecciones" style="text-decoration: none;" href="#" onclick="FnModalCambiarEmpresa(11,'P.FLORES'); return false;">
-                                    <div class="row position-relative" style="color: rgb(108, 108, 106);">
-                                        <div class="container-wa text-end pe-3 text-primary">
-                                            <input class="form-check-input" style="z-index: 1;" type="radio" name="radio" id="radio1" data-bs-toggle="modal" data-bs-target="#exampleModal">    
-                                            </div>
-                                        <div class="col-12">
-                                            <p class="m-0 text-secondary" style="font-size:13px;">20000000004</p>
-                                            <p class="m-0">EMPRESA03</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 divselect border-bottom border-secondary mb-1 p-1">
-                                <a class="link-colecciones" style="text-decoration: none;" href="#" onclick="FnModalCambiarEmpresa(12,'ETSAFRASA'); return false;">
-                                    <div class="row position-relative" style="color: rgb(108, 108, 106);">
-                                        <div class="container-wa text-end pe-3 text-primary">
-                                            <input class="form-check-input" style="z-index: 1;" type="radio" name="radio" id="radio1" data-bs-toggle="modal" data-bs-target="#exampleModal">    
-                                            </div>
-                                        <div class="col-12">
-                                            <p class="m-0 text-secondary" style="font-size:13px;">20000000005</p>
-                                            <p class="m-0">EMPRESA04</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 divselect border-bottom border-secondary mb-1 p-1">
-                                <a class="link-colecciones" style="text-decoration: none;" href="#" onclick="FnModalCambiarEmpresa(13,'INTERPERU'); return false;">
-                                    <div class="row position-relative" style="color: rgb(108, 108, 106);">
-                                        <div class="container-wa text-end pe-3 text-primary">
-                                            <input class="form-check-input" style="z-index: 1;" type="radio" name="radio" id="radio1" data-bs-toggle="modal" data-bs-target="#exampleModal">    
-                                            </div>
-                                        <div class="col-12">
-                                            <p class="m-0 text-secondary" style="font-size:13px;">20000000006</p>
-                                            <p class="m-0">EMPRESA05</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 divselect border-bottom border-secondary mb-1 p-1">
-                                <a class="link-colecciones" style="text-decoration: none;" href="#" onclick="FnModalCambiarEmpresa(14,'ORICA PERU S.A.'); return false;">
-                                    <div class="row position-relative" style="color: rgb(108, 108, 106);">
-                                        <div class="container-wa text-end pe-3 text-primary">
-                                            <input class="form-check-input" style="z-index: 1;" type="radio" name="radio" id="radio1" data-bs-toggle="modal" data-bs-target="#exampleModal">    
-                                            </div>
-                                        <div class="col-12">
-                                            <p class="m-0 text-secondary" style="font-size:13px;">20000000007</p>
-                                            <p class="m-0">EMPRESA06</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 divselect border-bottom border-secondary mb-1 p-1">
-                                <a class="link-colecciones" style="text-decoration: none;" onclick="FnModalCambiarEmpresa(15,'SENATI'); return false;">
-                                    <div class="row position-relative" style="color: rgb(108, 108, 106);">
-                                        <div class="container-wa text-end pe-3 text-primary">
-                                            <input class="form-check-input" style="z-index: 1;" type="radio" name="radio" id="radio1" data-bs-toggle="modal" data-bs-target="#exampleModal">    
-                                            </div>
-                                        <div class="col-12">
-                                            <p class="m-0 text-secondary" style="font-size:13px;">20000000008</p>
-                                            <p class="m-0">EMPRESA07</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>    
                         </div>
-                    </div>
-                    
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Establecer Empresa</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>                
-                            <div class="modal-body pb-0">
-                                <div class="form-row">
-                                    <div class="col-md-12">
-                                        <p class="mb-2 fw-bold text-center text-secondary">Haga clic en el boton Confirmar para establecer la siguiente Empresa:</p>
-                                        <input type="text" class="d-none" id="txtId" readonly>
-                                        <input type="text" class="form-control text-center border-0 fs-4 fw-bold" id="txtEmpresa">
+                
+                        <div class="row p-1 mb-2">
+                            <div class="col-6 col-sm-4 mb-1">
+                                <p class="m-0 text-secondary" style="font-size: 12px;">Fecha</p> 
+                                <p class="m-0 p-0">2024-07-15</p>
+                            </div>
+                            <div class="col-6 col-sm-4 mb-1">
+                                <p class="m-0 text-secondary" style="font-size: 12px;">Activo</p> 
+                                <p class="m-0 p-0">21FLOTA</p>
+                            </div>
+                            <div class="col-6 col-sm-4 mb-1">
+                                <p class="m-0 text-secondary" style="font-size: 12px;">Km/Hr</p> 
+                                <p class="m-0 p-0">0</p>
+                            </div>
+                            <div class="col-6 col-sm-4 mb-1">
+                                <p class="m-0 text-secondary" style="font-size: 12px;">Tipo</p> 
+                                <p class="m-0 p-0">PREVENTIVA</p>
+                            </div>
+                            <div class="col-6 col-sm-4 mb-1">
+                                <p class="m-0 text-secondary" style="font-size: 12px;">Sistema:</p> 
+                                <p class="m-0 p-0">6-NEUMATICO</p>
+                            </div>
+                            <div class="col-6 col-sm-4 mb-1">
+                                <p class="m-0 text-secondary" style="font-size: 12px;">Orígen:</p> 
+                                <p class="m-0 p-0">MP-MANTTO PREVENTIVO</p>
+                            </div>
+                            <div class="col-6 col-sm-4 mb-1">
+                                <p class="m-0 text-secondary" style="font-size: 12px;">Supervisor</p> 
+                                <p class="m-0 p-0">UNKNOWN</p>
+                            </div>
+                            <div class="col-6 col-sm-4 mb-1">
+                                <p class="m-0 text-secondary" style="font-size: 12px;">Contacto</p> 
+                                <p class="m-0 p-0">UNKNOWN</p>
+                            </div>
+                            <div class="col-6 col-sm-4 mb-1">
+                                <p class="m-0 text-secondary" style="font-size: 12px;">Estado</p>
+                                <span class='badge bg-primary'>Proceso</span>            </div>
+                            <div class="col-12 mb-1">
+                                <p class="m-0 text-secondary" style="font-size: 12px;">Actividad</p> 
+                                <p class="m-0 p-0">DRENADO DE SISTEMA NEUMATICO ARTICULADO - L,M,V</p>
+                            </div>
+                            <div class="col-12 mb-1">
+                                <p class="m-0 text-secondary" style="font-size: 12px;">Descripción:</p> 
+                                <p class="m-0 p-0">BUENANCIO CONFIADO, SE EJECUTO.
+                                    21004
+                                    21009
+                                    21010
+                                    21022
+                                    21023
+                                    21070
+                                    21071
+                                </p>
+                            </div>
+                            <div class="col-12 mb-1">
+                                <p class="m-0 text-secondary" style="font-size: 12px;">Observaciones</p> 
+                                <p class="m-0 p-0"></p>
+                            </div>            
+                        </div>
+                
+                        <div class="row p-1 mb-0">
+                            <div class="col-12 mb-0 border-bottom bg-light">
+                                <p class="m-0 fw-bold">Tareos</p>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-2 p-1">
+                            <div class="col-12 mb-1 pb-1 border-bottom">
+                                <div class="row">
+                                    <div class="col-12 d-flex justify-content-between">
+                                        <p class="m-0 p-0">BUENANCIO CONFIADO</p>
+                                        <p class="m-0 p-0 fw-bold">2 Min</p>
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-between">
+                                        <p class="m-0 p-0">2024-07-15 16:41:50</p>
+                                        <p class="m-0 p-0">2024-07-15 16:44:00</p>                                    
                                     </div>
                                 </div>
-                            </div>
-                            <div class="modal-body" id="msjCambiarEmpresa"></div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="button" class="btn btn-primary" onclick="FnCambiarEmpresa(); return false;">Confirmar</button>
-                            </div> 
+                            </div>        
                         </div>
+                
+                        <div class="row p-1 mb-0">
+                            <div class="col-12 mb-0 border-bottom bg-light">
+                                <p class="m-0 fw-bold">Imágenes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="row p-2 mb-3">
+                            <div class="col-12">
+                                <p class="fst-italic">No hay imágenes asociadas a esta Órden.</p>
+                            </div>        
+                        </div>
+                    </div>
+                     
+                    <div class="modal fade" id="modalFinalizarOrden" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Finalizar Órden de Trabajo</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>                
+                                <div class="modal-body pb-1">
+                                    <div class="row text-center fw-bold pt-3">                        
+                                        <p class="text-center">Para finalizar la Órden 377791 haga clic en el botón CONFIRMAR.</p>                    
+                                    </div>
+                                </div>
+                                <div class="modal-body pt-1" id="msjFinalizarOrden"></div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" onclick="FnFinalizarOrden(); return false;">CONFIRMAR</button>
+                                </div>              
+                            </div>
                         </div>
                     </div>
                 </div><!-- /.container-fluid -->
@@ -540,6 +532,43 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const selectInput = document.getElementById('equipoInput');
+        const selectList = document.getElementById('equipoList');
+        const selectItems = selectList.getElementsByClassName('custom-select-item');
+
+        // Mostrar/Ocultar la lista al hacer clic en el input
+        selectInput.addEventListener('click', function() {
+            selectList.style.display = selectList.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Seleccionar un elemento de la lista
+        Array.from(selectItems).forEach(item => {
+            item.addEventListener('click', function() {
+                selectInput.value = this.textContent;
+                selectList.style.display = 'none';
+            });
+        });
+
+        // Ocultar la lista si se hace clic fuera del select
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.custom-select-wrapper')) {
+                selectList.style.display = 'none';
+            }
+        });
+
+        // Filtrar elementos de la lista al escribir en el input
+        selectInput.addEventListener('input', function() {
+            const filter = selectInput.value.toLowerCase();
+            Array.from(selectItems).forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(filter) ? '' : 'none';
+            });
+            selectList.style.display = 'block';
+        });
+      });
+    </script>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

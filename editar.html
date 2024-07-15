@@ -372,148 +372,96 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <div class="p-3 mb-2 header text-uppercase text-center">
-                        <h1>Programación de mantenimiento</h1>
+                    <div class="row mb-3">
+                        <div class="col-12 btn-group" role="group" aria-label="Basic example">
+                            <a href="ordenes.html" type="button" class="btn btn-outline-primary fw-bold"><i class="fas fa-list"></i><span class="d-none d-sm-block"> Órdenes</span></a>
+                            <a href="resumen.html" type="button" class="btn btn-outline-primary fw-bold"><i class="fas fa-desktop"></i><span class="d-none d-sm-block"> Resúmen</span></a>
+                        </div>
+                    </div>
+                    <div class="row border-bottom mb-3 fs-5">
+                        <div class="col-12 fw-bold" style="display:flex; justify-content:space-between;">
+                            <p class="m-0 p-0">EMPRESA01</p>
+                            <input type="text" class="d-none" id="txtIdOt" value="406166" readonly/>
+                            <p class="m-0 p-0 text-center text-secondary">OT 000001</p>
+                        </div>
                     </div>
 
-                    <!-- ENLACES -->
-                    <div class="row">
-                        <div class="col-12">
-                            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-                                <ol class="breadcrumb">                        
-                                    <li class="breadcrumb-item active fw-bold" aria-current="page">EMPRESAS</li>
-                                    <li class="breadcrumb-item fw-bold"><a href="/ordenes.html" class="text-decoration-none">ORDENES</a></li>
-                                </ol>
-                            </nav>
+                    <div class="row mb-1 p-1">
+                        <div class="col-6 col-sm-4 mb-1">
+                            <p class="m-0 text-secondary" style="font-size: 12px;">Fecha:</p>
+                            <input type="date" id="txtFecha" class="form-control" value="2024-07-15"/>
+                        </div>
+                        <div class="col-6 col-sm-4 mb-1">
+                            <p class="m-0 text-secondary" style="font-size: 12px;">Tipo</p>
+                            <input type="text" class="form-control" value="PREVENTIVA" readonly/>
+                        </div>
+                        <div class="col-6 col-sm-4 mb-1">
+                            <p class="m-0 text-secondary" style="font-size: 12px;">Sistema:</p>
+                            <div class="input-group">
+                                <input type="text" id="txtIdSistema" class="d-none" value="6" readonly/>
+                                <input type="text" id="txtSistema" class="form-control" value="6-NEUMATICO" readonly/>
+                                <button type="button" class="btn btn-outline-secondary boton-hide" onclick="FnModalBuscarRecursos('sistema'); return false;"><i class="fas fa-pen"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 mb-1">
+                            <p class="m-0 text-secondary" style="font-size: 12px;">Orígen</p>
+                            <div class="input-group">
+                                <input type="text" id="txtIdOrigen" class="d-none" value="14" readonly/>
+                                <input type="text" id="txtOrigen" class="form-control" value="MP-MANTTO PREVENTIVO" readonly/>
+                                <button type="button" class="btn btn-outline-secondary boton-hide" onclick="FnModalBuscarRecursos('origen'); return false;"><i class="fas fa-pen"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 mb-1">
+                            <p class="m-0 text-secondary" style="font-size: 12px;">Supervisor</p>
+                            <div class="input-group">
+                                <input type="text" id="txtSupervisor" class="form-control" value="UNKNOWN" readonly/>
+                                <button type="button" class="btn btn-outline-secondary boton-hide" onclick="FnModalBuscarRecursos('supervisor'); return false;"><i class="fas fa-pen"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 mb-1">
+                            <p class="m-0 text-secondary" style="font-size: 12px;">Contacto</p> 
+                            <div class="input-group">
+                                <input type="text" id="txtContacto" class="form-control" value="UNKNOWN" readonly/>
+                                <button type="button" class="btn btn-outline-secondary boton-hide" onclick="FnModalBuscarRecursos('contacto'); return false;"><i class="fas fa-pen"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 mb-1">
+                            <p class="m-0 text-secondary" style="font-size: 12px;">Activo</p>
+                            <input type="text" class="form-control" value="22FLOTA" readonly/>
+                        </div>
+                        <div class="col-6 col-sm-4 mb-1">
+                            <p class="m-0 text-secondary" style="font-size: 12px;">Km/Hr</p>
+                            <input type="number" id="txtKm" class="form-control" value="0"/>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <p class="m-0 text-secondary" style="font-size: 12px;">Actividad</p>
+                            <input type="text" id="txtActividad" class="form-control" value="DRENADO DE SISTEMA NEUMATICO ALIMENTADOR - L,X,V"/>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <p class="m-0 text-secondary" style="font-size: 12px;">Descripción</p>
+                            <textarea class="form-control" id="txtDescripcion" rows="3">BUENANCIO CONFIADO, SE EJECUTO
+            22006
+            22008
+            22014
+            22021
+            22028
+            22035
+            22042</textarea>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <p class="m-0 text-secondary" style="font-size: 12px;">Observaciones</p>
+                            <textarea class="form-control" id="txtObservacion" rows="2"></textarea>
                         </div>
                     </div>
             
-                    <div class="container section-top">        
-                        <div class="row p-1">
-                            <div class="col-12 border-bottom fw-bold m-0 fs-4">EMPRESA02<span class="text-secondary" style="font-style: italic; font-size: 12px;"> Predeterminado</span></div>
-                        </div>
-                        <div class="row p-2 position-relative" style="z-index:0;">
-                            
-                            <div class="col-12 divselect border-bottom border-secondary mb-1 p-1">
-                                <a class="link-colecciones" style="text-decoration: none;" href="#" onclick="FnModalCambiarEmpresa(5,'INDUSTRIAS DEL ESPINO S.A.'); return false;">
-                                    <div class="row position-relative" style="color: rgb(108, 108, 106);">
-                                        <div class="container-wa text-end pe-3 text-primary">
-                                            <input class="form-check-input" style="z-index: 1;" type="radio" name="radio" id="radio1" data-bs-toggle="modal" data-bs-target="#exampleModal">    
-                                            </div>
-                                        <div class="col-12">
-                                            <p class="m-0 text-secondary" style="font-size:13px;">20000000002</p>
-                                            <p class="m-0">EMPRESA01</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 divselect border-bottom border-secondary mb-1 p-1">
-                                <a class="link-colecciones" style="text-decoration: none;" href="#" onclick="FnModalCambiarEmpresa(10,'REALIDAD EXPRESS'); return false;">
-                                    <div class="row position-relative"style="color: rgb(108, 108, 106);">
-                                        <div class="container-wa text-end pe-3 text-primary">
-                                            <input class="form-check-input" type="radio" name="radio" id="radio1"> 
-                                            <input class="form-check-input" style="z-index: 1;" type="radio" name="radio" id="radio1" data-bs-toggle="modal" data-bs-target="#exampleModal">    
-                                            </div>
-                                        <div class="col-12">
-                                            <p class="m-0 text-secondary" style="font-size:13px;">20000000003</p>
-                                            <p class="m-0">EMPRESA02</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 divselect border-bottom border-secondary mb-1 p-1">
-                                <a class="link-colecciones" style="text-decoration: none;" href="#" onclick="FnModalCambiarEmpresa(11,'P.FLORES'); return false;">
-                                    <div class="row position-relative" style="color: rgb(108, 108, 106);">
-                                        <div class="container-wa text-end pe-3 text-primary">
-                                            <input class="form-check-input" style="z-index: 1;" type="radio" name="radio" id="radio1" data-bs-toggle="modal" data-bs-target="#exampleModal">    
-                                            </div>
-                                        <div class="col-12">
-                                            <p class="m-0 text-secondary" style="font-size:13px;">20000000004</p>
-                                            <p class="m-0">EMPRESA03</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 divselect border-bottom border-secondary mb-1 p-1">
-                                <a class="link-colecciones" style="text-decoration: none;" href="#" onclick="FnModalCambiarEmpresa(12,'ETSAFRASA'); return false;">
-                                    <div class="row position-relative" style="color: rgb(108, 108, 106);">
-                                        <div class="container-wa text-end pe-3 text-primary">
-                                            <input class="form-check-input" style="z-index: 1;" type="radio" name="radio" id="radio1" data-bs-toggle="modal" data-bs-target="#exampleModal">    
-                                            </div>
-                                        <div class="col-12">
-                                            <p class="m-0 text-secondary" style="font-size:13px;">20000000005</p>
-                                            <p class="m-0">EMPRESA04</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 divselect border-bottom border-secondary mb-1 p-1">
-                                <a class="link-colecciones" style="text-decoration: none;" href="#" onclick="FnModalCambiarEmpresa(13,'INTERPERU'); return false;">
-                                    <div class="row position-relative" style="color: rgb(108, 108, 106);">
-                                        <div class="container-wa text-end pe-3 text-primary">
-                                            <input class="form-check-input" style="z-index: 1;" type="radio" name="radio" id="radio1" data-bs-toggle="modal" data-bs-target="#exampleModal">    
-                                            </div>
-                                        <div class="col-12">
-                                            <p class="m-0 text-secondary" style="font-size:13px;">20000000006</p>
-                                            <p class="m-0">EMPRESA05</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 divselect border-bottom border-secondary mb-1 p-1">
-                                <a class="link-colecciones" style="text-decoration: none;" href="#" onclick="FnModalCambiarEmpresa(14,'ORICA PERU S.A.'); return false;">
-                                    <div class="row position-relative" style="color: rgb(108, 108, 106);">
-                                        <div class="container-wa text-end pe-3 text-primary">
-                                            <input class="form-check-input" style="z-index: 1;" type="radio" name="radio" id="radio1" data-bs-toggle="modal" data-bs-target="#exampleModal">    
-                                            </div>
-                                        <div class="col-12">
-                                            <p class="m-0 text-secondary" style="font-size:13px;">20000000007</p>
-                                            <p class="m-0">EMPRESA06</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 divselect border-bottom border-secondary mb-1 p-1">
-                                <a class="link-colecciones" style="text-decoration: none;" onclick="FnModalCambiarEmpresa(15,'SENATI'); return false;">
-                                    <div class="row position-relative" style="color: rgb(108, 108, 106);">
-                                        <div class="container-wa text-end pe-3 text-primary">
-                                            <input class="form-check-input" style="z-index: 1;" type="radio" name="radio" id="radio1" data-bs-toggle="modal" data-bs-target="#exampleModal">    
-                                            </div>
-                                        <div class="col-12">
-                                            <p class="m-0 text-secondary" style="font-size:13px;">20000000008</p>
-                                            <p class="m-0">EMPRESA07</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>    
+                    <div class="row mb-3">
+                        <div class="col-12 mb-3">
+                            <button type="button" class="btn btn-outline-primary form-control" onclick="FnModificarOrden(); return false;"><i class="fas fa-save"></i> Guardar</button>
                         </div>
                     </div>
+                </div>
                     
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Establecer Empresa</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>                
-                            <div class="modal-body pb-0">
-                                <div class="form-row">
-                                    <div class="col-md-12">
-                                        <p class="mb-2 fw-bold text-center text-secondary">Haga clic en el boton Confirmar para establecer la siguiente Empresa:</p>
-                                        <input type="text" class="d-none" id="txtId" readonly>
-                                        <input type="text" class="form-control text-center border-0 fs-4 fw-bold" id="txtEmpresa">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-body" id="msjCambiarEmpresa"></div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="button" class="btn btn-primary" onclick="FnCambiarEmpresa(); return false;">Confirmar</button>
-                            </div> 
-                        </div>
-                        </div>
-                    </div>
+            
                 </div><!-- /.container-fluid -->
 
             </div>
@@ -540,6 +488,43 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const selectInput = document.getElementById('equipoInput');
+        const selectList = document.getElementById('equipoList');
+        const selectItems = selectList.getElementsByClassName('custom-select-item');
+
+        // Mostrar/Ocultar la lista al hacer clic en el input
+        selectInput.addEventListener('click', function() {
+            selectList.style.display = selectList.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Seleccionar un elemento de la lista
+        Array.from(selectItems).forEach(item => {
+            item.addEventListener('click', function() {
+                selectInput.value = this.textContent;
+                selectList.style.display = 'none';
+            });
+        });
+
+        // Ocultar la lista si se hace clic fuera del select
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.custom-select-wrapper')) {
+                selectList.style.display = 'none';
+            }
+        });
+
+        // Filtrar elementos de la lista al escribir en el input
+        selectInput.addEventListener('input', function() {
+            const filter = selectInput.value.toLowerCase();
+            Array.from(selectItems).forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(filter) ? '' : 'none';
+            });
+            selectList.style.display = 'block';
+        });
+      });
+    </script>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
